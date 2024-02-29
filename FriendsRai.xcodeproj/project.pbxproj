@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */; };
-		CCE3C7B02B9037FA0089CF77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AF2B9037FA0089CF77 /* ContentView.swift */; };
+		CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AF2B9037FA0089CF77 /* MainView.swift */; };
 		CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */; };
 		CCE3C7B52B9037FC0089CF77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE3C7B42B9037FC0089CF77 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		CCE3C7AA2B9037FA0089CF77 /* FriendsRai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsRai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRaiApp.swift; sourceTree = "<group>"; };
-		CCE3C7AF2B9037FA0089CF77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CCE3C7AF2B9037FA0089CF77 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCE3C7B42B9037FC0089CF77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,9 +51,11 @@
 		CCE3C7AC2B9037FA0089CF77 /* FriendsRai */ = {
 			isa = PBXGroup;
 			children = (
-				CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */,
-				CCE3C7AF2B9037FA0089CF77 /* ContentView.swift */,
-				CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */,
+				CCE3C7C22B906E610089CF77 /* Utilities */,
+				CCE3C7C12B906E4F0089CF77 /* View */,
+				CCE3C7C02B906E480089CF77 /* ViewModel */,
+				CCE3C7BF2B906E410089CF77 /* Model */,
+				CCE3C7BB2B906DC30089CF77 /* Support */,
 				CCE3C7B32B9037FC0089CF77 /* Preview Content */,
 			);
 			path = FriendsRai;
@@ -65,6 +67,44 @@
 				CCE3C7B42B9037FC0089CF77 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCE3C7BB2B906DC30089CF77 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */,
+				CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		CCE3C7BF2B906E410089CF77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCE3C7C02B906E480089CF77 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCE3C7C12B906E4F0089CF77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCE3C7AF2B9037FA0089CF77 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCE3C7C22B906E610089CF77 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCE3C7B02B9037FA0089CF77 /* ContentView.swift in Sources */,
+				CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */,
 				CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
