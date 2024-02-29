@@ -11,7 +11,9 @@ struct EmailSignUpView: View {
     @StateObject var viewModel = EmailSignUpViewModel()
     var body: some View {
         VStack {
+            
             Spacer()
+            
             VStack{
                 Text("Complete Your Profile")
                     .font(.system(size: 25, weight: .medium, design: .rounded))
@@ -22,12 +24,16 @@ struct EmailSignUpView: View {
                     .font(.system(size: 15))
                     .foregroundStyle(Color.gray)
             }
+            
             Spacer()
+            
             if  !viewModel.errorMessage.isEmpty{
                 Text(viewModel.errorMessage)
                     .foregroundStyle(Color.red)
             }
+            
             Form {
+                
                 Section{
                     HStack{
                         Image(systemName: "person")
@@ -60,6 +66,7 @@ struct EmailSignUpView: View {
                             .stroke(Color.gray, lineWidth: 1)
                     )
                 }
+                
                 Section{
                     HStack{
                         Image(systemName: "lock")
@@ -75,6 +82,7 @@ struct EmailSignUpView: View {
                             .stroke(Color.gray, lineWidth: 1)
                     )
                 }
+                
                 Section{
                     HStack{
                         Image(systemName: "lock")
@@ -90,19 +98,14 @@ struct EmailSignUpView: View {
                             .stroke(Color.gray, lineWidth: 1)
                     )
                 }
-                
-                
             }
             .listSectionSpacing(10)
             .frame(height: 350)
             .scrollContentBackground(.hidden)
             .padding(.bottom,10)
       
-            Button {
-                viewModel.register()
-            } label: {
-                Text("Sign Up")
-            }
+            FRButton(action: viewModel.register, backgroundColor: .black, text: "Sign Up", textColor: .white)
+            
             HStack{
                 Text("Have an account?")
                     .foregroundStyle(Color.gray)
@@ -115,7 +118,6 @@ struct EmailSignUpView: View {
                 }
             }
             .padding(10)
-
         }
     }
 }

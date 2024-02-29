@@ -20,6 +20,7 @@
 		CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75A2B907F6400C23FCD /* Extensions.swift */; };
 		CCAFF75E2B90874100C23FCD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75D2B90874100C23FCD /* ProfileView.swift */; };
 		CCAFF7602B90876B00C23FCD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75F2B90876B00C23FCD /* ProfileViewModel.swift */; };
+		CCAFF7622B90931700C23FCD /* FRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7612B90931700C23FCD /* FRButton.swift */; };
 		CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */; };
 		CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AF2B9037FA0089CF77 /* MainView.swift */; };
 		CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		CCAFF75C2B90817500C23FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CCAFF75D2B90874100C23FCD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CCAFF75F2B90876B00C23FCD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CCAFF7612B90931700C23FCD /* FRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRButton.swift; sourceTree = "<group>"; };
 		CCE3C7AA2B9037FA0089CF77 /* FriendsRai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsRai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRaiApp.swift; sourceTree = "<group>"; };
 		CCE3C7AF2B9037FA0089CF77 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				CCAFF75A2B907F6400C23FCD /* Extensions.swift */,
+				CCAFF7612B90931700C23FCD /* FRButton.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */,
 				CCAFF7512B907DB800C23FCD /* AuthenticationViewModel.swift in Sources */,
 				CCE3C7D82B90727A0089CF77 /* HomeView.swift in Sources */,
+				CCAFF7622B90931700C23FCD /* FRButton.swift in Sources */,
 				CCAFF74D2B907D8300C23FCD /* EmailSignUpViewModel.swift in Sources */,
 				CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */,
 				CCAFF7602B90876B00C23FCD /* ProfileViewModel.swift in Sources */,

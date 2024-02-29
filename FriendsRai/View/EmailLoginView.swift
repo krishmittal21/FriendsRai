@@ -11,16 +11,22 @@ struct EmailLoginView: View {
     
     @StateObject var viewModel = EmailLoginViewModel()
     var body: some View {
+        
         VStack {
+            
             Spacer()
+            
             Text("Hello There! ")
                 .font(.system(size: 35, weight: .medium, design: .rounded))
                 .padding(.top,50)
-            if  !viewModel.errorMessage.isEmpty{
+            
+            if  !viewModel.errorMessage.isEmpty {
                 Text(viewModel.errorMessage)
                     .foregroundStyle(Color.red)
             }
+            
             Form {
+                
                 Section{
                     HStack{
                         Image(systemName: "envelope")
@@ -36,6 +42,7 @@ struct EmailLoginView: View {
                             .stroke(Color.gray, lineWidth: 1)
                     )
                 }
+                
                 Section{
                     HStack{
                         Image(systemName: "lock")
@@ -57,18 +64,15 @@ struct EmailLoginView: View {
             .frame(height: 350)
             .scrollContentBackground(.hidden)
             
-            Button {
-                viewModel.login()
-            } label: {
-                Text("LogIn")
-            }
+            FRButton(action: viewModel.login, backgroundColor: .black, text: "Log In", textColor: .white)
+            
             HStack{
                 Text("Don't have an account?")
                     .foregroundStyle(Color.gray)
                 NavigationLink{
                     EmailSignUpView()
                 } label: {
-                    Text("Sign In")
+                    Text("Sign Up")
                         .underline()
                         .foregroundStyle(Color.green)
                 }
