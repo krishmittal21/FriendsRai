@@ -14,7 +14,6 @@
 		CCAFF74D2B907D8300C23FCD /* EmailSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF74C2B907D8300C23FCD /* EmailSignUpViewModel.swift */; };
 		CCAFF74F2B907D9400C23FCD /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF74E2B907D9400C23FCD /* EmailLoginViewModel.swift */; };
 		CCAFF7512B907DB800C23FCD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7502B907DB800C23FCD /* AuthenticationViewModel.swift */; };
-		CCAFF7532B907E8000C23FCD /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7522B907E8000C23FCD /* FirebaseHelper.swift */; };
 		CCAFF7552B907EB500C23FCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7542B907EB500C23FCD /* FirebaseFirestore */; };
 		CCAFF7572B907EB500C23FCD /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7562B907EB500C23FCD /* FirebaseFirestoreCombine-Community */; };
 		CCAFF7592B907EB500C23FCD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7582B907EB500C23FCD /* FirebaseFirestoreSwift */; };
@@ -45,7 +44,6 @@
 		CCAFF74C2B907D8300C23FCD /* EmailSignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewModel.swift; sourceTree = "<group>"; };
 		CCAFF74E2B907D9400C23FCD /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
 		CCAFF7502B907DB800C23FCD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		CCAFF7522B907E8000C23FCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		CCAFF75A2B907F6400C23FCD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CCAFF75C2B90817500C23FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CCAFF75D2B90874100C23FCD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 		CCE3C7C22B906E610089CF77 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				CCAFF7522B907E8000C23FCD /* FirebaseHelper.swift */,
 				CCAFF75A2B907F6400C23FCD /* Extensions.swift */,
 			);
 			path = Utilities;
@@ -276,7 +273,6 @@
 				CCAFF74F2B907D9400C23FCD /* EmailLoginViewModel.swift in Sources */,
 				CCAFF74B2B907AA900C23FCD /* EmailSignUpView.swift in Sources */,
 				CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */,
-				CCAFF7532B907E8000C23FCD /* FirebaseHelper.swift in Sources */,
 				CCAFF7512B907DB800C23FCD /* AuthenticationViewModel.swift in Sources */,
 				CCE3C7D82B90727A0089CF77 /* HomeView.swift in Sources */,
 				CCAFF74D2B907D8300C23FCD /* EmailSignUpViewModel.swift in Sources */,

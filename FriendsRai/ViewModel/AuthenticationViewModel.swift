@@ -14,7 +14,7 @@ import GoogleSignInSwift
 
 @MainActor
 class AuthenticationViewModel: ObservableObject {
-   
+    
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
@@ -29,8 +29,15 @@ class AuthenticationViewModel: ObservableObject {
 
 extension AuthenticationViewModel {
     
+    func insertUserRecord(id: String, name: String, email: String, joined: TimeInterval) {
+        let newUser = User(id: id, name: name, email: email, joined: joined)
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(id)
+            .setData(newUser.asDictionary())
+    }
+    
     func signInWithGoogle() async -> Bool {
-        
         guard let clientID = FirebaseApp.app()?.options.clientID else {
             fatalError("No client ID found in Firebase Config")
         }
@@ -56,9 +63,11 @@ extension AuthenticationViewModel {
             let result = try await Auth.auth().signIn(with: credential)
             let firebaseUser = result.user
             
-            FirebaseHelper.insertUserRecord(id: firebaseUser.uid, name: firebaseUser.displayName ?? "", email: firebaseUser.email ?? "", joined: currentDate)
+            insertUserRecord(id: firebaseUser.uid, name: firebaseUser.displayName ?? "", email: firebaseUser.email ?? "", joined: currentDate)
+            print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
             
             return true
+            
         }
         catch {
             print(error.localizedDescription)
