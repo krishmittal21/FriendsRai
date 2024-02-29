@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct AuthenticationView: View {
+    
+    @StateObject var viewModel = AuthenticationViewModel()
+    
     var body: some View {
         
         NavigationView{
             
             VStack{
                 Button{
-                    
+                    Task {
+                        await viewModel.signInWithGoogle()
+                    }
                 } label: {
                     HStack{
                         Image("google")
@@ -34,7 +39,7 @@ struct AuthenticationView: View {
                             .resizable()
                             .frame(width: 25,height: 20)
                             .foregroundStyle(Color.green)
-                        Text("SignIn with Email")
+                        Text("SignUp with Email")
                         
                             .foregroundStyle(.black)
                         
