@@ -26,7 +26,7 @@ struct AuthenticationView: View {
                             .resizable()
                             .frame(width: 20,height: 20)
                         Text("SignIn with Google")
-                            .foregroundStyle(.black)
+                            .foregroundStyle(Color.blackColor)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 8)
@@ -38,10 +38,10 @@ struct AuthenticationView: View {
                         Image(systemName: "envelope.fill")
                             .resizable()
                             .frame(width: 25,height: 20)
-                            .foregroundStyle(Color.green)
+                            .foregroundStyle(Color.primaryColor)
                         Text("SignUp with Email")
                         
-                            .foregroundStyle(.black)
+                            .foregroundStyle(Color.blackColor)
                         
                     }
                     .frame(maxWidth: .infinity)
@@ -59,7 +59,7 @@ struct AuthenticationView: View {
                     } label: {
                         Text("Log In")
                             .underline()
-                            .foregroundStyle(Color.green)
+                            .foregroundStyle(Color.primaryColor)
                     }
                 }
                 .padding(10)
