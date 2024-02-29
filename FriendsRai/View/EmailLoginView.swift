@@ -24,6 +24,7 @@ struct EmailLoginView: View {
                 Text(viewModel.errorMessage)
                     .foregroundStyle(Color.red)
             }
+            Spacer()
             
             Form {
                 
@@ -78,6 +79,8 @@ struct EmailLoginView: View {
                 }
             }
             .padding(10)
+            
+            Spacer()
             
         }
     }
