@@ -21,6 +21,7 @@
 		CCAFF75E2B90874100C23FCD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75D2B90874100C23FCD /* ProfileView.swift */; };
 		CCAFF7602B90876B00C23FCD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75F2B90876B00C23FCD /* ProfileViewModel.swift */; };
 		CCAFF7622B90931700C23FCD /* FRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7612B90931700C23FCD /* FRButton.swift */; };
+		CCAFF7652B90AA1500C23FCD /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7642B90AA1500C23FCD /* SplineRuntime */; };
 		CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */; };
 		CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AF2B9037FA0089CF77 /* MainView.swift */; };
 		CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 				CCAFF7572B907EB500C23FCD /* FirebaseFirestoreCombine-Community in Frameworks */,
 				CCE3C7C72B9070E10089CF77 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				CCE3C7CD2B9070E10089CF77 /* FirebaseAppCheck in Frameworks */,
+				CCAFF7652B90AA1500C23FCD /* SplineRuntime in Frameworks */,
 				CCE3C7CB2B9070E10089CF77 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				CCE3C7D02B9070F80089CF77 /* GoogleSignIn in Frameworks */,
 				CCAFF7452B90747700C23FCD /* FirebaseAuth in Frameworks */,
@@ -212,6 +214,7 @@
 				CCAFF7542B907EB500C23FCD /* FirebaseFirestore */,
 				CCAFF7562B907EB500C23FCD /* FirebaseFirestoreCombine-Community */,
 				CCAFF7582B907EB500C23FCD /* FirebaseFirestoreSwift */,
+				CCAFF7642B90AA1500C23FCD /* SplineRuntime */,
 			);
 			productName = FriendsRai;
 			productReference = CCE3C7AA2B9037FA0089CF77 /* FriendsRai.app */;
@@ -244,6 +247,7 @@
 			packageReferences = (
 				CCE3C7C32B9070E10089CF77 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CCE3C7CE2B9070F80089CF77 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				CCAFF7632B90AA1500C23FCD /* XCRemoteSwiftPackageReference "spline-ios" */,
 			);
 			productRefGroup = CCE3C7AB2B9037FA0089CF77 /* Products */;
 			projectDirPath = "";
@@ -496,6 +500,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CCAFF7632B90AA1500C23FCD /* XCRemoteSwiftPackageReference "spline-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/splinetool/spline-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		CCE3C7C32B9070E10089CF77 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -539,6 +551,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CCE3C7C32B9070E10089CF77 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		CCAFF7642B90AA1500C23FCD /* SplineRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCAFF7632B90AA1500C23FCD /* XCRemoteSwiftPackageReference "spline-ios" */;
+			productName = SplineRuntime;
 		};
 		CCE3C7C42B9070E10089CF77 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
