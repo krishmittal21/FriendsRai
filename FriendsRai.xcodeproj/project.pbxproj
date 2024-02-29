@@ -19,6 +19,8 @@
 		CCAFF7572B907EB500C23FCD /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7562B907EB500C23FCD /* FirebaseFirestoreCombine-Community */; };
 		CCAFF7592B907EB500C23FCD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7582B907EB500C23FCD /* FirebaseFirestoreSwift */; };
 		CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75A2B907F6400C23FCD /* Extensions.swift */; };
+		CCAFF75E2B90874100C23FCD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75D2B90874100C23FCD /* ProfileView.swift */; };
+		CCAFF7602B90876B00C23FCD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75F2B90876B00C23FCD /* ProfileViewModel.swift */; };
 		CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */; };
 		CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AF2B9037FA0089CF77 /* MainView.swift */; };
 		CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		CCAFF7522B907E8000C23FCD /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		CCAFF75A2B907F6400C23FCD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CCAFF75C2B90817500C23FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CCAFF75D2B90874100C23FCD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CCAFF75F2B90876B00C23FCD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CCE3C7AA2B9037FA0089CF77 /* FriendsRai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsRai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRaiApp.swift; sourceTree = "<group>"; };
 		CCE3C7AF2B9037FA0089CF77 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				CCAFF74C2B907D8300C23FCD /* EmailSignUpViewModel.swift */,
 				CCAFF74E2B907D9400C23FCD /* EmailLoginViewModel.swift */,
 				CCAFF7502B907DB800C23FCD /* AuthenticationViewModel.swift */,
+				CCAFF75F2B90876B00C23FCD /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				CCE3C7D72B90727A0089CF77 /* HomeView.swift */,
 				CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */,
 				CCAFF74A2B907AA900C23FCD /* EmailSignUpView.swift */,
+				CCAFF75D2B90874100C23FCD /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,9 +281,11 @@
 				CCE3C7D82B90727A0089CF77 /* HomeView.swift in Sources */,
 				CCAFF74D2B907D8300C23FCD /* EmailSignUpViewModel.swift in Sources */,
 				CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */,
+				CCAFF7602B90876B00C23FCD /* ProfileViewModel.swift in Sources */,
 				CCE3C7DA2B9073050089CF77 /* Users.swift in Sources */,
 				CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */,
 				CCE3C7D62B90726B0089CF77 /* AuthenticationView.swift in Sources */,
+				CCAFF75E2B90874100C23FCD /* ProfileView.swift in Sources */,
 				CCE3C7DC2B9073790089CF77 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
