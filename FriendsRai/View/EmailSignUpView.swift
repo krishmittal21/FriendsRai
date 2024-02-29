@@ -103,6 +103,18 @@ struct EmailSignUpView: View {
             } label: {
                 Text("Sign Up")
             }
+            HStack{
+                Text("Have an account?")
+                    .foregroundStyle(Color.gray)
+                NavigationLink{
+                    EmailLoginView()
+                } label: {
+                    Text("Log In")
+                        .underline()
+                        .foregroundStyle(Color.green)
+                }
+            }
+            .padding(10)
 
         }
     }
