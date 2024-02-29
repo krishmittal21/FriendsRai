@@ -104,7 +104,7 @@ struct EmailSignUpView: View {
             .scrollContentBackground(.hidden)
             .padding(.bottom,10)
       
-            FRButton(action: viewModel.register, backgroundColor: .black, text: "Sign Up", textColor: .white)
+            FRButton(action: viewModel.register, backgroundColor: Color.blackColor, text: "Sign Up", textColor: .white)
             
             HStack{
                 Text("Have an account?")
@@ -114,7 +114,7 @@ struct EmailSignUpView: View {
                 } label: {
                     Text("Log In")
                         .underline()
-                        .foregroundStyle(Color.green)
+                        .foregroundStyle(Color.primaryColor)
                 }
             }
             .padding(10)
