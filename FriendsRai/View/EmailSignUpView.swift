@@ -25,8 +25,6 @@ struct EmailSignUpView: View {
                     .foregroundStyle(Color.gray)
             }
             
-            Spacer()
-            
             if  !viewModel.errorMessage.isEmpty{
                 Text(viewModel.errorMessage)
                     .foregroundStyle(Color.red)
@@ -103,7 +101,18 @@ struct EmailSignUpView: View {
             .frame(height: 350)
             .scrollContentBackground(.hidden)
             .padding(.bottom,10)
-      
+            
+            Spacer()
+            //To Implement
+            Text("By Signing Up, you agree to our ")
+            +
+            Text("Terms & Conditions")
+                .foregroundStyle(Color.primaryColor)
+            +
+            Text(" and ")
+            +
+            Text("Privacy Policy.")
+                .foregroundStyle(Color.primaryColor)
             FRButton(action: viewModel.register, backgroundColor: Color.blackColor, text: "Sign Up", textColor: .white)
             
             HStack{
@@ -118,6 +127,8 @@ struct EmailSignUpView: View {
                 }
             }
             .padding(10)
+            
+            Spacer()
         }
     }
 }
