@@ -13,7 +13,21 @@ struct MainView: View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
             ProfileView()
         } else {
-            AuthenticationView()
+            accountView
+        }
+    }
+    
+    @ViewBuilder
+    var accountView: some View {
+        TabView {
+            EmergencyButtonView()
+                .tabItem { Label("Button", systemImage: "button.programmable") }
+            MapView()
+                .tabItem { Label("Map", systemImage: "mappin.circle") }
+            HelplineNumberView()
+                .tabItem { Label("List", systemImage: "list.bullet.circle.fill") }
+            ProfileView()
+                .tabItem { Label("Profile", systemImage: "person.circle.fill") }
         }
     }
 }
