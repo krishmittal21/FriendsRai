@@ -11,9 +11,9 @@ struct MainView: View {
     @StateObject var viewModel = MainViewModel()
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-            ProfileView()
-        } else {
             accountView
+        } else {
+            AuthenticationView()
         }
     }
     
