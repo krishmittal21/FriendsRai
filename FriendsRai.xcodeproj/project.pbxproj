@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */ = {isa = PBXBuildFile; fileRef = CC495A9B2B917DCA003A12FE /* ghosts.splineswift */; };
 		CCAFF7452B90747700C23FCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7442B90747700C23FCD /* FirebaseAuth */; };
 		CCAFF7472B90747700C23FCD /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7462B90747700C23FCD /* FirebaseAuthCombine-Community */; };
 		CCAFF7492B907A9A00C23FCD /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC495A9B2B917DCA003A12FE /* ghosts.splineswift */ = {isa = PBXFileReference; lastKnownFileType = file; path = ghosts.splineswift; sourceTree = "<group>"; };
 		CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
 		CCAFF74A2B907AA900C23FCD /* EmailSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpView.swift; sourceTree = "<group>"; };
 		CCAFF74C2B907D8300C23FCD /* EmailSignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewModel.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CCE3C7D32B9071370089CF77 /* GoogleService-Info.plist */,
+				CC495A9B2B917DCA003A12FE /* ghosts.splineswift */,
 				CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */,
 				CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */,
 			);
@@ -263,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */,
 				CCE3C7B52B9037FC0089CF77 /* Preview Assets.xcassets in Resources */,
 				CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */,
 				CCE3C7D42B9071370089CF77 /* GoogleService-Info.plist in Resources */,
