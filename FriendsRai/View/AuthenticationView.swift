@@ -21,10 +21,13 @@ struct AuthenticationView: View {
                     .frame(height: 500)
                                 
                 VStack{
-                    Text("Friends Rai")
-                        .font(.title)
-                    Spacer()
+    
+                    Text("FriendsRai")
+                        .font(.system(size: 30, weight: .bold))
+                        .padding(.top, 40)
                     
+                    Spacer()
+                
                     VStack{
                         Button{
                             Task {
@@ -96,6 +99,7 @@ struct AuthenticationView: View {
                 
             }
         }
+        .preferredColorScheme(.light)
     }
     
 }
