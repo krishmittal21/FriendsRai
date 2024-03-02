@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct EmergencyButtonView: View {
+    
+    let emergencyMessages = emergencyMessagesValues
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -42,10 +45,20 @@ struct EmergencyButtonView: View {
             .onTapGesture {
                 
             }
+            
             Spacer()
             
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(emergencyMessages, id: \.self) { message in
+                        FRMessageCard(message: message)
+                    }
+                }
+                .padding(20)
+            }
+            
+            Spacer()
         }
-        .preferredColorScheme(.light)
     }
 }
 
