@@ -59,6 +59,7 @@ struct EmergencyButtonView: View {
             
             Spacer()
         }
+        .preferredColorScheme(.light)
     }
 }
 
