@@ -90,3 +90,5 @@ fastlane/test_output
 iOSInjectionProject/
 
 **/.DS_Store
+# Google (Firebase) plist file
+GoogleService-Info.plist
