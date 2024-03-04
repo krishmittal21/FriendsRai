@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EmergencyButtonView: View {
     
+    @StateObject var viewModel = EmergencyButtonViewModel()
     let emergencyMessages = emergencyMessagesValues
     
     var body: some View {
@@ -43,7 +44,7 @@ struct EmergencyButtonView: View {
                     .foregroundStyle(.white)
             }
             .onTapGesture {
-                
+                viewModel.sendMessage()
             }
             
             Spacer()

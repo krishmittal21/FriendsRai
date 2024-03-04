@@ -44,6 +44,7 @@
 		CCE3C7D62B90726B0089CF77 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */; };
 		CCE3C7DA2B9073050089CF77 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D92B9073050089CF77 /* Users.swift */; };
 		CCE3C7DC2B9073790089CF77 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7DB2B9073790089CF77 /* MainViewModel.swift */; };
+		CCE49E4D2B931BEE00963D2E /* EmergencyButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		CCE3C7D92B9073050089CF77 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		CCE3C7DB2B9073790089CF77 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		CCE3C7BF2B906E410089CF77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC5C4FE62B92E0BD007CB12D /* EmergencyMessagesValues.swift */,
 				CCE3C7D92B9073050089CF77 /* Users.swift */,
 				CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */,
 			);
@@ -173,6 +176,7 @@
 				CCAFF74E2B907D9400C23FCD /* EmailLoginViewModel.swift */,
 				CCAFF7502B907DB800C23FCD /* AuthenticationViewModel.swift */,
 				CCAFF75F2B90876B00C23FCD /* ProfileViewModel.swift */,
+				CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,7 +202,6 @@
 				CCAFF75A2B907F6400C23FCD /* Extensions.swift */,
 				CCAFF7612B90931700C23FCD /* FRButton.swift */,
 				CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */,
-				CC5C4FE62B92E0BD007CB12D /* EmergencyMessagesValues.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE49E4D2B931BEE00963D2E /* EmergencyButtonViewModel.swift in Sources */,
 				CCAFF7492B907A9A00C23FCD /* EmailLoginView.swift in Sources */,
 				CCAFF74F2B907D9400C23FCD /* EmailLoginViewModel.swift in Sources */,
 				CCAFF74B2B907AA900C23FCD /* EmailSignUpView.swift in Sources */,
