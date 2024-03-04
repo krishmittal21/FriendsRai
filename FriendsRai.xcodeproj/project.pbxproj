@@ -13,6 +13,8 @@
 		CC639C812B91A6CA00FDFC3C /* EmergencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */; };
 		CC639C832B91A6E800FDFC3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C822B91A6E800FDFC3C /* MapView.swift */; };
 		CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */; };
+		CCA5FBC62B95C00800D95A4A /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */; };
+		CCA5FBC82B95C5B400D95A4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCA5FBC72B95C5B400D95A4A /* GoogleService-Info.plist */; };
 		CCAFF7452B90747700C23FCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7442B90747700C23FCD /* FirebaseAuth */; };
 		CCAFF7472B90747700C23FCD /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7462B90747700C23FCD /* FirebaseAuthCombine-Community */; };
 		CCAFF7492B907A9A00C23FCD /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */; };
@@ -39,7 +41,6 @@
 		CCE3C7CD2B9070E10089CF77 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = CCE3C7CC2B9070E10089CF77 /* FirebaseAppCheck */; };
 		CCE3C7D02B9070F80089CF77 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CCE3C7CF2B9070F80089CF77 /* GoogleSignIn */; };
 		CCE3C7D22B9070F80089CF77 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CCE3C7D12B9070F80089CF77 /* GoogleSignInSwift */; };
-		CCE3C7D42B9071370089CF77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCE3C7D32B9071370089CF77 /* GoogleService-Info.plist */; };
 		CCE3C7D62B90726B0089CF77 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */; };
 		CCE3C7DA2B9073050089CF77 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D92B9073050089CF77 /* Users.swift */; };
 		CCE3C7DC2B9073790089CF77 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7DB2B9073790089CF77 /* MainViewModel.swift */; };
@@ -53,6 +54,8 @@
 		CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonView.swift; sourceTree = "<group>"; };
 		CC639C822B91A6E800FDFC3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumberView.swift; sourceTree = "<group>"; };
+		CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
+		CCA5FBC72B95C5B400D95A4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
 		CCAFF74A2B907AA900C23FCD /* EmailSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpView.swift; sourceTree = "<group>"; };
 		CCAFF74C2B907D8300C23FCD /* EmailSignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewModel.swift; sourceTree = "<group>"; };
@@ -68,7 +71,6 @@
 		CCE3C7AF2B9037FA0089CF77 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCE3C7B42B9037FC0089CF77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CCE3C7D32B9071370089CF77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		CCE3C7D92B9073050089CF77 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		CCE3C7DB2B9073790089CF77 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -148,9 +150,9 @@
 		CCE3C7BB2B906DC30089CF77 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				CCE3C7D32B9071370089CF77 /* GoogleService-Info.plist */,
 				CC495A9B2B917DCA003A12FE /* ghosts.splineswift */,
 				CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */,
+				CCA5FBC72B95C5B400D95A4A /* GoogleService-Info.plist */,
 				CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */,
 			);
 			path = Support;
@@ -161,6 +163,7 @@
 			children = (
 				CCE3C7D92B9073050089CF77 /* Users.swift */,
 				CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */,
+				CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,9 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */,
+				CCA5FBC82B95C5B400D95A4A /* GoogleService-Info.plist in Resources */,
 				CCE3C7B52B9037FC0089CF77 /* Preview Assets.xcassets in Resources */,
 				CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */,
-				CCE3C7D42B9071370089CF77 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +318,7 @@
 				CCAFF75E2B90874100C23FCD /* ProfileView.swift in Sources */,
 				CCE3C7DC2B9073790089CF77 /* MainViewModel.swift in Sources */,
 				CC5C4FE52B92DD5E007CB12D /* EmergencyMessages.swift in Sources */,
+				CCA5FBC62B95C00800D95A4A /* EmergencyContact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
