@@ -32,6 +32,7 @@ struct EmergencyButtonView: View {
                 Text("Message and send Location to all your Emergency Contacts")
                     .multilineTextAlignment(.center)
             }
+            .foregroundStyle(Color.blackColor)
             .padding(.bottom,40)
             
             ZStack{
@@ -52,9 +53,12 @@ struct EmergencyButtonView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(emergencyMessages, id: \.self) { message in
-                        FRMessageCard(message: message)
+                        FRMessageCard(message: message){
+                            viewModel.message = message.text
+                        }
                     }
                 }
+                .foregroundStyle(Color.blackColor)
                 .padding(20)
             }
             

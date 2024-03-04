@@ -10,7 +10,6 @@
 		CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */ = {isa = PBXBuildFile; fileRef = CC495A9B2B917DCA003A12FE /* ghosts.splineswift */; };
 		CC5C4FE32B92D6F5007CB12D /* FRMessageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */; };
 		CC5C4FE52B92DD5E007CB12D /* EmergencyMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */; };
-		CC5C4FE72B92E0BD007CB12D /* EmergencyMessagesValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE62B92E0BD007CB12D /* EmergencyMessagesValues.swift */; };
 		CC639C812B91A6CA00FDFC3C /* EmergencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */; };
 		CC639C832B91A6E800FDFC3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C822B91A6E800FDFC3C /* MapView.swift */; };
 		CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */; };
@@ -51,7 +50,6 @@
 		CC495A9B2B917DCA003A12FE /* ghosts.splineswift */ = {isa = PBXFileReference; lastKnownFileType = file; path = ghosts.splineswift; sourceTree = "<group>"; };
 		CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRMessageCard.swift; sourceTree = "<group>"; };
 		CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMessages.swift; sourceTree = "<group>"; };
-		CC5C4FE62B92E0BD007CB12D /* EmergencyMessagesValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMessagesValues.swift; sourceTree = "<group>"; };
 		CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonView.swift; sourceTree = "<group>"; };
 		CC639C822B91A6E800FDFC3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumberView.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		CCE3C7BF2B906E410089CF77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC5C4FE62B92E0BD007CB12D /* EmergencyMessagesValues.swift */,
 				CCE3C7D92B9073050089CF77 /* Users.swift */,
 				CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */,
 			);
@@ -318,7 +315,6 @@
 				CCAFF75E2B90874100C23FCD /* ProfileView.swift in Sources */,
 				CCE3C7DC2B9073790089CF77 /* MainViewModel.swift in Sources */,
 				CC5C4FE52B92DD5E007CB12D /* EmergencyMessages.swift in Sources */,
-				CC5C4FE72B92E0BD007CB12D /* EmergencyMessagesValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

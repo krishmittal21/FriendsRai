@@ -10,6 +10,8 @@ import MessageUI
 
 class EmergencyButtonViewModel: NSObject, ObservableObject, MFMessageComposeViewControllerDelegate {
     
+    @Published var message = ""
+    
     func sendMessage(){
         guard MFMessageComposeViewController.canSendText() else {
             return
@@ -17,8 +19,8 @@ class EmergencyButtonViewModel: NSObject, ObservableObject, MFMessageComposeView
         
         let composeVC = MFMessageComposeViewController()
         composeVC.messageComposeDelegate = self
-        composeVC.recipients = ["+919315672658"]
-        composeVC.body = "Emergency message"
+        composeVC.recipients = ["+919654998993"]
+        composeVC.body = message
         
         UIApplication.shared.windows.first?.rootViewController?.present(composeVC, animated: true, completion: nil)
         
