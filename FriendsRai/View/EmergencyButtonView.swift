@@ -10,6 +10,7 @@ import SwiftUI
 struct EmergencyButtonView: View {
     
     @StateObject var viewModel = EmergencyButtonViewModel()
+    @State private var selectedMessage: EmergencyMessage?
     let emergencyMessages = emergencyMessagesValues
     
     var body: some View {
@@ -53,7 +54,12 @@ struct EmergencyButtonView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(emergencyMessages, id: \.self) { message in
-                        FRMessageCard(message: message){
+                        FRMessageCard(message: message, isSelected: selectedMessage == message){
+                            if selectedMessage == message {
+                                selectedMessage = nil
+                            } else {
+                                selectedMessage = message
+                            }
                             viewModel.message = message.text
                         }
                     }
