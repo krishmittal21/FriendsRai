@@ -9,6 +9,8 @@ import SwiftUI
 
 struct EmergencyButtonView: View {
     
+    @StateObject var viewModel = EmergencyButtonViewModel()
+    @State private var selectedMessage: EmergencyMessage?
     let emergencyMessages = emergencyMessagesValues
     
     var body: some View {
@@ -31,6 +33,7 @@ struct EmergencyButtonView: View {
                 Text("Message and send Location to all your Emergency Contacts")
                     .multilineTextAlignment(.center)
             }
+            .foregroundStyle(Color.blackColor)
             .padding(.bottom,40)
             
             ZStack{
@@ -43,7 +46,7 @@ struct EmergencyButtonView: View {
                     .foregroundStyle(.white)
             }
             .onTapGesture {
-                
+                viewModel.sendMessage()
             }
             
             Spacer()
@@ -51,9 +54,17 @@ struct EmergencyButtonView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(emergencyMessages, id: \.self) { message in
-                        FRMessageCard(message: message)
+                        FRMessageCard(message: message, isSelected: selectedMessage == message){
+                            if selectedMessage == message {
+                                selectedMessage = nil
+                            } else {
+                                selectedMessage = message
+                            }
+                            viewModel.message = message.text
+                        }
                     }
                 }
+                .foregroundStyle(Color.blackColor)
                 .padding(20)
             }
             
