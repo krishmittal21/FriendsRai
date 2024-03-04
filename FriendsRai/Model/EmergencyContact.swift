@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EmergencyContact: Encodable {
+struct EmergencyContact: Codable {
     let name: String
     let phoneNumber: String
 }

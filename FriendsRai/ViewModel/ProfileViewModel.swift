@@ -13,8 +13,8 @@ class ProfileViewModel: ObservableObject {
     
     @Published var user:User? = nil
     @Published var contact:EmergencyContact? = nil
-    @Published var contactName = "krish"
-    @Published var contactNumber = "+919999670308"
+    @Published var contactName = ""
+    @Published var contactNumber = ""
     
     init(){}
     
@@ -40,4 +40,6 @@ class ProfileViewModel: ObservableObject {
             .document(newId)
             .setData(newContact.asDictionary())
     }
+    
+
 }
