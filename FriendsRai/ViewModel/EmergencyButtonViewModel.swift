@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MessageUI
+import MapKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
@@ -49,6 +50,7 @@ class EmergencyButtonViewModel: NSObject, ObservableObject, MFMessageComposeView
             return
         }
         
+        
         fetchContacts { contacts in
             let phoneNumbers = contacts.map { $0.phoneNumber }
             
@@ -56,6 +58,11 @@ class EmergencyButtonViewModel: NSObject, ObservableObject, MFMessageComposeView
             composeVC.messageComposeDelegate = self
             composeVC.recipients = phoneNumbers
             composeVC.body = self.message
+            if let userLocation = CLLocationManager().location {
+                let locationString = "Latitude: \(userLocation.coordinate.latitude), Longitude: \(userLocation.coordinate.longitude)"
+                let locationData = locationString.data(using: .utf8)!
+                composeVC.addAttachmentData(locationData, typeIdentifier: "text/plain", filename: "user_location.txt")
+            }
             
             UIApplication.shared.windows.first?.rootViewController?.present(composeVC, animated: true, completion: nil)
         }
