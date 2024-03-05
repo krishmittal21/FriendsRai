@@ -9,8 +9,20 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    
+    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
+    
     var body: some View {
-        Map()
+        Map(position: $position) {
+            UserAnnotation()
+        }
+        .mapControls {
+            MapUserLocationButton()
+            MapPitchToggle()
+        }
+        .onAppear{
+            CLLocationManager().requestWhenInUseAuthorization()
+        }
     }
 }
 
