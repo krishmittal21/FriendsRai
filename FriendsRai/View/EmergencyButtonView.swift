@@ -31,7 +31,7 @@ struct EmergencyButtonView: View {
                 Text("Need Help ?")
                     .font(.system(size: 40, weight: .bold))
                     .padding(.bottom,10)
-                Text("Message and send Location to all your Emergency Contacts")
+                Text("Message all your Friends at just one tap !")
                     .multilineTextAlignment(.center)
             }
             .foregroundStyle(Color.blackColor)
