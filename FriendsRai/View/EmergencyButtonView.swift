@@ -12,6 +12,7 @@ struct EmergencyButtonView: View {
     @StateObject var viewModel = EmergencyButtonViewModel()
     @State private var selectedMessage: EmergencyMessage?
     @State private var isTapped: Bool = false
+    @State private var showMenu: Bool = false
     let emergencyMessages = emergencyMessagesValues
     
     var body: some View {
@@ -19,6 +20,18 @@ struct EmergencyButtonView: View {
             ZStack{
                 Color.backgroundColor.ignoresSafeArea()
                 buttonView
+            }
+            .navigationTitle("FriendsRai")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading){
+                    Button(action:{
+                        showMenu.toggle()
+                    }, label: {
+                        Image(systemName: "line.3.horizontal")
+                    }
+                    )
+                }
             }
         }
     }
