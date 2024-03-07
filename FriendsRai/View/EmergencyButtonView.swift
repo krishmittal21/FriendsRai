@@ -20,19 +20,9 @@ struct EmergencyButtonView: View {
             ZStack{
                 Color.backgroundColor.ignoresSafeArea()
                 buttonView
+                
             }
-            .navigationTitle("FriendsRai")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar{
-                ToolbarItem(placement: .topBarLeading){
-                    Button(action:{
-                        showMenu.toggle()
-                    }, label: {
-                        Image(systemName: "line.3.horizontal")
-                    }
-                    )
-                }
-            }
+            
         }
     }
     

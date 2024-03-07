@@ -16,6 +16,7 @@
 		CC639C832B91A6E800FDFC3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C822B91A6E800FDFC3C /* MapView.swift */; };
 		CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */; };
 		CC7B82F82B962BAA00BAABEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC7B82F72B962BAA00BAABEE /* GoogleService-Info.plist */; };
+		CC89EA9A2B99852400AD83DF /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */; };
 		CCA5FBC62B95C00800D95A4A /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */; };
 		CCAFF7452B90747700C23FCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7442B90747700C23FCD /* FirebaseAuth */; };
 		CCAFF7472B90747700C23FCD /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7462B90747700C23FCD /* FirebaseAuthCombine-Community */; };
@@ -59,6 +60,7 @@
 		CC639C822B91A6E800FDFC3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumberView.swift; sourceTree = "<group>"; };
 		CC7B82F72B962BAA00BAABEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
 		CCAFF74A2B907AA900C23FCD /* EmailSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				CC639C822B91A6E800FDFC3C /* MapView.swift */,
 				CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */,
 				CC6183DA2B98697800A424F2 /* AddFriendsView.swift */,
+				CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */,
 				CCAFF7512B907DB800C23FCD /* AuthenticationViewModel.swift in Sources */,
 				CCAFF7622B90931700C23FCD /* FRButton.swift in Sources */,
+				CC89EA9A2B99852400AD83DF /* HamburgerMenuView.swift in Sources */,
 				CCAFF74D2B907D8300C23FCD /* EmailSignUpViewModel.swift in Sources */,
 				CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */,
 				CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */,
