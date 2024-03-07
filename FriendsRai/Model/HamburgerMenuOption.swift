@@ -27,7 +27,7 @@ enum HamburgerMenuOption: Int, CaseIterable {
     var page: AnyView {
         switch self {
         case .friends:
-            return AnyView(FriendsView())
+            return AnyView(AddFriendsView())
         }
     }
 }

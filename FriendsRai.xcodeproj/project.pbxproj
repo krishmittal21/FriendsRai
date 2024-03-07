@@ -19,7 +19,6 @@
 		CC89EA9A2B99852400AD83DF /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */; };
 		CC89EA9E2B99ABB300AD83DF /* HamburgerMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */; };
 		CC89EAA22B99B65E00AD83DF /* HamburgerMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */; };
-		CC89EAA42B99C13500AD83DF /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EAA32B99C13500AD83DF /* FriendsView.swift */; };
 		CC89EAA62B99C50F00AD83DF /* HamburgerMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EAA52B99C50F00AD83DF /* HamburgerMenuViewModel.swift */; };
 		CCA5FBC62B95C00800D95A4A /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */; };
 		CCAFF7452B90747700C23FCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7442B90747700C23FCD /* FirebaseAuth */; };
@@ -65,7 +64,6 @@
 		CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuOption.swift; sourceTree = "<group>"; };
 		CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuRowView.swift; sourceTree = "<group>"; };
-		CC89EAA32B99C13500AD83DF /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		CC89EAA52B99C50F00AD83DF /* HamburgerMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuViewModel.swift; sourceTree = "<group>"; };
 		CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				CC6183DA2B98697800A424F2 /* AddFriendsView.swift */,
 				CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */,
 				CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */,
-				CC89EAA32B99C13500AD83DF /* FriendsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,7 +322,6 @@
 				CCAFF74D2B907D8300C23FCD /* EmailSignUpViewModel.swift in Sources */,
 				CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */,
 				CC89EA9E2B99ABB300AD83DF /* HamburgerMenuOption.swift in Sources */,
-				CC89EAA42B99C13500AD83DF /* FriendsView.swift in Sources */,
 				CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */,
 				CC6183DD2B98698600A424F2 /* AddFriendsViewModel.swift in Sources */,
 				CC5C4FE32B92D6F5007CB12D /* FRMessageCard.swift in Sources */,
