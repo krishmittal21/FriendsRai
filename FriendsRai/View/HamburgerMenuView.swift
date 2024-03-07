@@ -10,6 +10,7 @@ import SwiftUI
 struct HamburgerMenuView: View {
     
     @Binding var isShowing: Bool
+    @State private var selectedOption: HamburgerMenuOption?
     
     var body: some View {
         ZStack {
@@ -24,6 +25,14 @@ struct HamburgerMenuView: View {
                     VStack(alignment: .leading, spacing: 32){
                         HamburgerMenuHeaderView
                         
+                        VStack {
+                            ForEach(HamburgerMenuOption.allCases){ option in
+                                NavigationLink(destination: option.page, tag: option, selection: $selectedOption) {
+                                    HamburgerMenuRowView(option: option, selectedOption: $selectedOption)
+                                }
+                            }
+                        }
+                        
                         Spacer()
                     }
                     .padding()
@@ -32,9 +41,10 @@ struct HamburgerMenuView: View {
                     
                     Spacer()
                 }
+                .transition(.move(edge: .leading))
             }
         }
-        .transition(.move(edge: .leading))
+        
         .animation(.easeInOut, value: isShowing)
     }
     
@@ -59,6 +69,8 @@ struct HamburgerMenuView: View {
             }
         }
     }
+    
+    
 }
 
 #Preview {
