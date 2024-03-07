@@ -1,14 +1,14 @@
 //
-//  ProfileViewModel.swift
+//  HamburgerMenuViewModel.swift
 //  FriendsRai
 //
-//  Created by Krish Mittal on 29/02/24.
+//  Created by Krish Mittal on 07/03/24.
 //
 
 import Foundation
 import FirebaseAuth
 
-class ProfileViewModel: ObservableObject {
+class HamburgerMenuViewModel: ObservableObject {
     
     init(){}
     

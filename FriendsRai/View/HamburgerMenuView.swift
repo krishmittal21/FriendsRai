@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HamburgerMenuView: View {
     
+    @StateObject var viewModel = HamburgerMenuViewModel()
     @Binding var isShowing: Bool
     @State private var selectedOption: HamburgerMenuOption?
     
@@ -34,6 +35,20 @@ struct HamburgerMenuView: View {
                         }
                         
                         Spacer()
+                        
+                        Button {
+                            viewModel.logout()
+                        } label: {
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundStyle(.white)
+                                
+                                Text("Log Out")
+                                    .foregroundStyle(.pink)
+                                    .font(.system(size: 15))
+                            }
+                        }
                     }
                     .padding()
                     .frame(width: 270, alignment: .leading)

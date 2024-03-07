@@ -29,8 +29,6 @@ struct MainView: View {
                         .tabItem { Label("Map", systemImage: "mappin.circle") }
                     HelplineNumberView()
                         .tabItem { Label("List", systemImage: "list.bullet.circle.fill") }
-                    ProfileView()
-                        .tabItem { Label("Profile", systemImage: "person.circle.fill") }
                 }
                 HamburgerMenuView(isShowing: $showMenu)
             }
