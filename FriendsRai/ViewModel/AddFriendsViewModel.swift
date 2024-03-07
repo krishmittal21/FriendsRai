@@ -1,15 +1,15 @@
 //
-//  ProfileViewModel.swift
+//  AddFriendsViewModel.swift
 //  FriendsRai
 //
-//  Created by Krish Mittal on 29/02/24.
+//  Created by Krish Mittal on 06/03/24.
 //
 
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
-class ProfileViewModel: ObservableObject {
+class AddFriendsViewModel: ObservableObject {
     
     @Published var user:User? = nil
     @Published var contact:EmergencyContact? = nil
@@ -18,18 +18,12 @@ class ProfileViewModel: ObservableObject {
     
     init(){}
     
-    func logout(){
-        do {
-            try Auth.auth().signOut()
-        } catch {
-            print(error)
-        }
-    }
-    
     func saveContact(){
+        
         guard let uId = Auth.auth().currentUser?.uid else {
             return
         }
+        
         let newId = UUID().uuidString
         let newContact = EmergencyContact(name: contactName, phoneNumber: contactNumber)
         
@@ -40,6 +34,4 @@ class ProfileViewModel: ObservableObject {
             .document(newId)
             .setData(newContact.asDictionary())
     }
-    
-
 }

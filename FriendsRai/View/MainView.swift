@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var viewModel = MainViewModel()
+    @State private var showMenu: Bool = false
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
             accountView
@@ -19,15 +20,32 @@ struct MainView: View {
     
     @ViewBuilder
     var accountView: some View {
-        TabView {
-            EmergencyButtonView()
-                .tabItem { Label("Button", systemImage: "button.programmable") }
-            MapView()
-                .tabItem { Label("Map", systemImage: "mappin.circle") }
-            HelplineNumberView()
-                .tabItem { Label("List", systemImage: "list.bullet.circle.fill") }
-            ProfileView()
-                .tabItem { Label("Profile", systemImage: "person.circle.fill") }
+        NavigationView{
+            ZStack{
+                TabView {
+                    EmergencyButtonView()
+                        .tabItem { Label("Button", systemImage: "button.programmable") }
+                    MapView()
+                        .tabItem { Label("Map", systemImage: "mappin.circle") }
+                    HelplineNumberView()
+                        .tabItem { Label("List", systemImage: "list.bullet.circle.fill") }
+                }
+                HamburgerMenuView(isShowing: $showMenu)
+            }
+            .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
+            .navigationTitle("FriendsRai")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading){
+                    Button(action:{
+                        showMenu.toggle()
+                    }, label: {
+                        Image(systemName: "line.3.horizontal")
+                    }
+                    )
+                }
+            }
+            
         }
     }
 }

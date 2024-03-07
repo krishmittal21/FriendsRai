@@ -12,6 +12,7 @@ struct EmergencyButtonView: View {
     @StateObject var viewModel = EmergencyButtonViewModel()
     @State private var selectedMessage: EmergencyMessage?
     @State private var isTapped: Bool = false
+    @State private var showMenu: Bool = false
     let emergencyMessages = emergencyMessagesValues
     
     var body: some View {
@@ -19,7 +20,9 @@ struct EmergencyButtonView: View {
             ZStack{
                 Color.backgroundColor.ignoresSafeArea()
                 buttonView
+                
             }
+            
         }
     }
     
@@ -31,7 +34,7 @@ struct EmergencyButtonView: View {
                 Text("Need Help ?")
                     .font(.system(size: 40, weight: .bold))
                     .padding(.bottom,10)
-                Text("Message and send Location to all your Emergency Contacts")
+                Text("Message all your Friends at just one tap !")
                     .multilineTextAlignment(.center)
             }
             .foregroundStyle(Color.blackColor)
