@@ -39,16 +39,13 @@ struct HamburgerMenuView: View {
                         Button {
                             viewModel.logout()
                         } label: {
-                            ZStack{
-                                
-                                RoundedRectangle(cornerRadius: 10)
-                                    .foregroundStyle(.white)
-                                
-                                Text("Log Out")
-                                    .foregroundStyle(.pink)
-                                    .font(.system(size: 15))
-                            }
+                            Text("Log Out")
+                                .padding(.vertical, 8)
+                                .padding(.horizontal,75)
+                                .foregroundStyle(.red)
+                                .font(.system(size: 15))
                         }
+                        .buttonStyle(.bordered)
                     }
                     .padding()
                     .frame(width: 270, alignment: .leading)
