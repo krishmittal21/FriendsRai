@@ -24,7 +24,11 @@ struct HamburgerMenuView: View {
                     }
                 HStack {
                     VStack(alignment: .leading, spacing: 32){
-                        HamburgerMenuHeaderView
+                        if let user = viewModel.user {
+                            HamburgerMenuHeaderView(user: user)
+                        } else {
+                            Text("Loading Profile ..")
+                        }
                         
                         VStack {
                             ForEach(HamburgerMenuOption.allCases){ option in
@@ -56,12 +60,14 @@ struct HamburgerMenuView: View {
                 .transition(.move(edge: .leading))
             }
         }
-        
+        .onAppear{
+            viewModel.fetchUser()
+        }
         .animation(.easeInOut, value: isShowing)
     }
     
     @ViewBuilder
-    var HamburgerMenuHeaderView: some View {
+    func HamburgerMenuHeaderView (user: User) -> some View {
         HStack{
             Image(systemName: "person.circle.fill")
                 .imageScale(.large)
@@ -72,10 +78,10 @@ struct HamburgerMenuView: View {
                 .padding(.vertical)
             
             VStack(alignment: .leading, spacing: 6){
-                Text("Krish Mittal")
+                Text(user.name)
                     .font(.subheadline)
                 
-                Text("contact@krishmittal.com")
+                Text(user.email)
                     .font(.footnote)
                     .tint(.gray)
             }
