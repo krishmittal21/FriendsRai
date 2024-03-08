@@ -13,9 +13,16 @@ struct AddFriendsView: View {
         NavigationView{
             VStack {
                 HStack{
-                    Text("Edit Friends")
+                    
+                    Text("My Friends")
+                        .font(.title)
+                        .bold()
+                    
                     Spacer()
-                    Image(systemName: "person.crop.circle.fill.badge.plus").imageScale(.medium)
+                    
+                    Image(systemName:"person.crop.circle.fill.badge.plus")
+                        .resizable()
+                        .frame(width: 50,height: 45)
                         .onTapGesture {
                             viewModel.openContactPicker()
                         }
@@ -42,7 +49,6 @@ struct AddFriendsView: View {
                 Spacer()
                 
             }
-            .navigationTitle("My Friends")
             .onAppear{
                 viewModel.fetchContacts()
             }
