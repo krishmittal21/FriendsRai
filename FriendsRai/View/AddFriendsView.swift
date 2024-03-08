@@ -35,6 +35,9 @@ struct AddFriendsView: View {
                         .tint(.red)
                     }
                 }
+                .padding()
+                .listStyle(PlainListStyle())
+                .cornerRadius(10)
                 
                 Spacer()
                 
