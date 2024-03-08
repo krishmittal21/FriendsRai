@@ -126,5 +126,6 @@ class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate 
             .collection("emergencycontacts")
             .document(newId)
             .setData(newContact.asDictionary())
+    fetchContacts()
     }
 }
