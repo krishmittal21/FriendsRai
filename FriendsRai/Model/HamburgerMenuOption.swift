@@ -9,11 +9,15 @@ import SwiftUI
 
 enum HamburgerMenuOption: Int, CaseIterable {
     case friends
+    case helplinelist
     
     var title: String {
         switch self {
         case .friends:
             return "Friends"
+        case .helplinelist:
+            return "Helpline List"
+        
         }
     }
     
@@ -21,6 +25,8 @@ enum HamburgerMenuOption: Int, CaseIterable {
         switch self {
         case .friends:
             return "person.fill"
+        case .helplinelist:
+            return "list.bullet"
         }
     }
     
@@ -28,6 +34,8 @@ enum HamburgerMenuOption: Int, CaseIterable {
         switch self {
         case .friends:
             return AnyView(AddFriendsView())
+        case .helplinelist:
+            return AnyView(HelplineNumberView())
         }
     }
 }

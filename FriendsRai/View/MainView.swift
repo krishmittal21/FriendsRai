@@ -27,12 +27,11 @@ struct MainView: View {
                         .tabItem { Label("Button", systemImage: "button.programmable") }
                     MapView()
                         .tabItem { Label("Map", systemImage: "mappin.circle") }
-                    HelplineNumberView()
-                        .tabItem { Label("List", systemImage: "list.bullet.circle.fill") }
                 }
                 HamburgerMenuView(isShowing: $showMenu)
             }
             .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
+            .toolbarBackground(Color.backgroundColor, for: .navigationBar)
             .navigationTitle("FriendsRai")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
