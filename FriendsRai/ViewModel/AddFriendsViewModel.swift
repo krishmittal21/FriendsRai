@@ -18,7 +18,34 @@ class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate 
     @Published var contactName = ""
     @Published var contactNumber = ""
     @Published var fetchedContacts: [EmergencyContact] = []
-
+    
+    
+    func deleteContact(_ contact: EmergencyContact) {
+        guard let uId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(uId)
+            .collection("emergencycontacts")
+            .whereField("name", isEqualTo: contact.name)
+            .whereField("phoneNumber", isEqualTo: contact.phoneNumber)
+            .getDocuments { snapshot, error in
+                if let error = error {
+                    print("Error deleting document: \(error)")
+                    return
+                }
+                
+                for document in snapshot!.documents {
+                    document.reference.delete()
+                }
+                
+                self.fetchedContacts.removeAll(where: { $0 == contact })
+            }
+    }
+    
+    
     
     func fetchContacts() {
         guard let uId = Auth.auth().currentUser?.uid else {
@@ -46,7 +73,7 @@ class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate 
                 self.fetchedContacts = contacts
             }
     }
-
+    
     
     func openContactPicker() {
         let contactPicker = CNContactPickerViewController()

@@ -28,6 +28,12 @@ struct AddFriendsView: View {
                         Text(contact.phoneNumber)
                             .font(.subheadline)
                     }
+                    .swipeActions{
+                        Button("Delete"){
+                            viewModel.deleteContact(contact)
+                        }
+                        .tint(.red)
+                    }
                 }
                 
                 Spacer()
