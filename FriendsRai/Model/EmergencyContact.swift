@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EmergencyContact: Codable {
+struct EmergencyContact: Codable, Hashable {
     let name: String
     let phoneNumber: String
 }

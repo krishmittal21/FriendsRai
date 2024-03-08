@@ -19,12 +19,24 @@ struct AddFriendsView: View {
                         .onTapGesture {
                             viewModel.openContactPicker()
                         }
-                    Image(systemName: "minus.circle.fill").imageScale(.medium)
                 }
                 .padding()
+                List(viewModel.fetchedContacts, id: \.self) { contact in
+                    VStack(alignment: .leading) {
+                        Text(contact.name)
+                            .font(.headline)
+                        Text(contact.phoneNumber)
+                            .font(.subheadline)
+                    }
+                }
+                
                 Spacer()
+                
             }
             .navigationTitle("My Friends")
+            .onAppear{
+                viewModel.fetchContacts()
+            }
         }
     }
 }

@@ -17,6 +17,35 @@ class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate 
     @Published var contact:EmergencyContact? = nil
     @Published var contactName = ""
     @Published var contactNumber = ""
+    @Published var fetchedContacts: [EmergencyContact] = []
+
+    
+    func fetchContacts() {
+        guard let uId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(uId)
+            .collection("emergencycontacts")
+            .getDocuments { snapshot, error in
+                if let error = error {
+                    print("Error getting documents: \(error)")
+                    return
+                }
+                var contacts: [EmergencyContact] = []
+                for document in snapshot!.documents {
+                    if
+                        let name = document["name"] as? String,
+                        let phoneNumber = document["phoneNumber"] as? String {
+                        let contact = EmergencyContact(name: name, phoneNumber: phoneNumber)
+                        contacts.append(contact)
+                    }
+                }
+                self.fetchedContacts = contacts
+            }
+    }
 
     
     func openContactPicker() {
@@ -56,7 +85,7 @@ class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate 
     }
     
     func saveContact(){
-                
+        
         guard let uId = Auth.auth().currentUser?.uid else {
             return
         }
