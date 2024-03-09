@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC163C312B9C121E00019059 /* HelplineNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC163C302B9C121E00019059 /* HelplineNumbers.swift */; };
+		CC163C332B9C181F00019059 /* HelplineRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC163C322B9C181F00019059 /* HelplineRowView.swift */; };
 		CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */ = {isa = PBXBuildFile; fileRef = CC495A9B2B917DCA003A12FE /* ghosts.splineswift */; };
 		CC5C4FE32B92D6F5007CB12D /* FRMessageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */; };
 		CC5C4FE52B92DD5E007CB12D /* EmergencyMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		CC163C302B9C121E00019059 /* HelplineNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumbers.swift; sourceTree = "<group>"; };
+		CC163C322B9C181F00019059 /* HelplineRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineRowView.swift; sourceTree = "<group>"; };
 		CC495A9B2B917DCA003A12FE /* ghosts.splineswift */ = {isa = PBXFileReference; lastKnownFileType = file; path = ghosts.splineswift; sourceTree = "<group>"; };
 		CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRMessageCard.swift; sourceTree = "<group>"; };
 		CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMessages.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				CC6183DA2B98697800A424F2 /* AddFriendsView.swift */,
 				CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */,
 				CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */,
+				CC163C322B9C181F00019059 /* HelplineRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				CCE49E4D2B931BEE00963D2E /* EmergencyButtonViewModel.swift in Sources */,
 				CCAFF7492B907A9A00C23FCD /* EmailLoginView.swift in Sources */,
 				CCAFF74F2B907D9400C23FCD /* EmailLoginViewModel.swift in Sources */,
+				CC163C332B9C181F00019059 /* HelplineRowView.swift in Sources */,
 				CCAFF74B2B907AA900C23FCD /* EmailSignUpView.swift in Sources */,
 				CC89EAA22B99B65E00AD83DF /* HamburgerMenuRowView.swift in Sources */,
 				CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */,
