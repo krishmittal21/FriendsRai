@@ -14,8 +14,9 @@ struct HelplineRowView: View {
     var body: some View {
         HStack {
             
-            Text(name)
+            Text(splitName())
                 .font(.headline)
+                .fixedSize(horizontal: false, vertical: true)
             
             Spacer()
             
@@ -28,6 +29,23 @@ struct HelplineRowView: View {
                 }
         }
         .padding()
+    }
+    
+    func splitName() -> String {
+        let words = name.components(separatedBy: " ")
+        var formattedName = ""
+        for i in stride(from: 0, to: words.count, by: 2) {
+            let firstWord = words[i]
+            var secondWord = ""
+            if i + 1 < words.count {
+                secondWord = words[i + 1]
+            }
+            formattedName += "\(firstWord) \(secondWord)"
+            if i + 2 < words.count {
+                formattedName += "\n"
+            }
+        }
+        return formattedName
     }
 }
 
