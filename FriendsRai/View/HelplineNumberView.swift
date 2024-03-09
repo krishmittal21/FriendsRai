@@ -9,7 +9,12 @@ import SwiftUI
 
 struct HelplineNumberView: View {
     var body: some View {
-        Text("List")
+        NavigationView{
+            VStack{
+                
+            }
+            .navigationTitle("Resources")
+        }
     }
 }
 

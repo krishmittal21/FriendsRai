@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC163C312B9C121E00019059 /* HelplineNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC163C302B9C121E00019059 /* HelplineNumbers.swift */; };
 		CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */ = {isa = PBXBuildFile; fileRef = CC495A9B2B917DCA003A12FE /* ghosts.splineswift */; };
 		CC5C4FE32B92D6F5007CB12D /* FRMessageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */; };
 		CC5C4FE52B92DD5E007CB12D /* EmergencyMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC163C302B9C121E00019059 /* HelplineNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumbers.swift; sourceTree = "<group>"; };
 		CC495A9B2B917DCA003A12FE /* ghosts.splineswift */ = {isa = PBXFileReference; lastKnownFileType = file; path = ghosts.splineswift; sourceTree = "<group>"; };
 		CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRMessageCard.swift; sourceTree = "<group>"; };
 		CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMessages.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */,
 				CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */,
 				CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */,
+				CC163C302B9C121E00019059 /* HelplineNumbers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */,
 				CC89EA9E2B99ABB300AD83DF /* HamburgerMenuOption.swift in Sources */,
 				CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */,
+				CC163C312B9C121E00019059 /* HelplineNumbers.swift in Sources */,
 				CC6183DD2B98698600A424F2 /* AddFriendsViewModel.swift in Sources */,
 				CC5C4FE32B92D6F5007CB12D /* FRMessageCard.swift in Sources */,
 				CC639C832B91A6E800FDFC3C /* MapView.swift in Sources */,

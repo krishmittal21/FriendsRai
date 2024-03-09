@@ -16,7 +16,7 @@ enum HamburgerMenuOption: Int, CaseIterable {
         case .friends:
             return "Friends"
         case .helplinelist:
-            return "Helpline List"
+            return "Resources"
         
         }
     }
