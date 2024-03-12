@@ -30,6 +30,7 @@ This Project was built in public, and you can follow the process on [Twitter](ht
 ## Contribute to the Project
 
 Add Verified Locations and suggest new categories.
+To setup this Project Locally simply clone this repo and setup your own firebase project.
 
 ## Screenshots
 
