@@ -37,32 +37,46 @@ struct MapView: View {
             MapPitchToggle()
         }
         .safeAreaInset(edge: .bottom) {
-            
-            VStack {
-                HStack {
-                    Spacer()
-                    VStack {
-                        ForEach(LocationType.allCases, id: \.self) { locationType in
-                            Button(action: {
-                                self.selectedLocationType = locationType
-                            }) {
-                                Image(systemName: locationType.image)
-                                    .foregroundColor(locationType == selectedLocationType ? .white : Color.blackColor)
-                                    .font(.subheadline)
-                                    .padding()
-                                    .background(locationType == selectedLocationType ? locationType.color.opacity(0.8) : .white)
-                                    .cornerRadius(20)
-                            }
-                        }
-                    }
-                    .padding()
-                }
-            }
+            selectLocationType
         }
         
         .onAppear{
             CLLocationManager().requestWhenInUseAuthorization()
         }
+    }
+    
+    @ViewBuilder
+    var selectLocationType: some View {
+        ZStack {
+            
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 50)
+                .padding(.horizontal)
+            
+            VStack {
+                HStack(spacing: 20) {
+                    ForEach(LocationType.allCases, id: \.self) { locationType in
+                        Button(action: {
+                            self.selectedLocationType = locationType
+                        }) {
+                            Image(systemName: locationType.image)
+                                .foregroundColor(locationType == selectedLocationType ? .white : Color.blackColor)
+                                .font(.subheadline)
+                                .padding(10)
+                                .background(locationType == selectedLocationType ? locationType.color.opacity(0.8) : .white)
+                                .cornerRadius(20)
+                        }
+                    }
+                }
+                .padding(.horizontal)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 100)
+        .padding(.bottom)
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
