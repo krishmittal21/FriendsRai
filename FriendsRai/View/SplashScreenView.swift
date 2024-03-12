@@ -16,7 +16,7 @@ struct SplashScreenView: View {
             if self.isActive {
                 MainView()
             } else {
-                Color("SplashColor").edgesIgnoringSafeArea(.all)
+                Color.backgroundColor.edgesIgnoringSafeArea(.all)
                 Image("logo")
                     .resizable()
                     .scaledToFit()
