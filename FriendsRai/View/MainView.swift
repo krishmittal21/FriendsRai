@@ -23,10 +23,14 @@ struct MainView: View {
         NavigationView{
             ZStack{
                 TabView {
-                    EmergencyButtonView()
-                        .tabItem { Label("Button", systemImage: "button.programmable") }
-                    MapView()
-                        .tabItem { Label("Map", systemImage: "mappin.circle") }
+                    Group {
+                        EmergencyButtonView()
+                            .tabItem { Label("Button", systemImage: "button.programmable") }
+                        MapView()
+                            .tabItem { Label("Map", systemImage: "mappin.circle") }
+                    }
+                    .toolbarBackground(Color.backgroundColor, for: .tabBar)
+                    .toolbarBackground(.visible, for: .tabBar)
                 }
                 HamburgerMenuView(isShowing: $showMenu)
             }
@@ -39,8 +43,8 @@ struct MainView: View {
                     Button(action:{
                         showMenu.toggle()
                     }, label: {
-                        Image(systemName: "line.3.horizontal")
-                    }
+                            Image(systemName: "line.3.horizontal")
+                        }
                     )
                 }
             }
