@@ -52,7 +52,7 @@ struct MapView: View {
             RoundedRectangle(cornerRadius: 20)
                 .fill(Color.white)
                 .frame(maxWidth: .infinity)
-                .frame(height: 50)
+                .frame(height: 70)
                 .padding(.horizontal)
             
             VStack {
@@ -61,12 +61,15 @@ struct MapView: View {
                         Button(action: {
                             self.selectedLocationType = locationType
                         }) {
-                            Image(systemName: locationType.image)
-                                .foregroundColor(locationType == selectedLocationType ? .white : Color.blackColor)
-                                .font(.subheadline)
-                                .padding(10)
-                                .background(locationType == selectedLocationType ? locationType.color.opacity(0.8) : .white)
-                                .cornerRadius(20)
+                            VStack {
+                                Image(systemName: locationType.image)
+                                Text(locationType.name)
+                            }
+                            .foregroundColor(locationType == selectedLocationType ? .white : Color.blackColor)
+                            .font(.subheadline)
+                            .padding(10)
+                            .background(locationType == selectedLocationType ? locationType.color.opacity(0.8) : .white)
+                            .cornerRadius(20)
                         }
                     }
                 }
