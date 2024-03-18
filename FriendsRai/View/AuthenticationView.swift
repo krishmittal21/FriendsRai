@@ -13,89 +13,122 @@ struct AuthenticationView: View {
     
     @StateObject var viewModel = AuthenticationViewModel()
     
+    private func signInWithEmailPassword() {
+        Task {
+            await viewModel.signInWithEmailPassword()
+        }
+    }
+    
+    private func signInWithGoogle() {
+        Task {
+          if await viewModel.signInWithGoogle() == true {
+          }
+        }
+    }
+    
     var body: some View {
         
         NavigationView{
             
             ZStack{
+                
                 Onboard3DView()
                     .frame(height: 500)
+                    .padding(.bottom,500)
                 
                 VStack{
                     
                     Text("FriendsRai")
-                        .font(.system(size: 30, weight: .bold))
-                        .padding(.top, 40)
+                        .bold()
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom,20)
                     
-                    Spacer()
-                    
-                    VStack{
+                    HStack {
+                        Image(systemName: "at")
+                        TextField("Email", text: $viewModel.email)
+                            .textInputAutocapitalization(.never)
+                            .disableAutocorrection(true)
+                            .submitLabel(.next)
                         
-                        Button{
-                            Task {
-                                await viewModel.signInWithGoogle()
-                            }
-                        } label: {
-                            HStack{
-                                Image("google")
-                                    .resizable()
-                                    .frame(width: 20,height: 20)
-                                Text("Sign in with Google")
-                                    .bold()
-                                    .foregroundStyle(Color.blackColor)
-                            }
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 15)
-                            .background(Color.white)
-                            .cornerRadius(8)
-                            .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
-                        }
-                        
-                        SignInWithAppleButton(.signIn) { request in
-                            viewModel.handleSignInWithAppleRequest(request)
-                        } onCompletion: { result in
-                            viewModel.handleSignInWithAppleCompletion(result)
-                        }
-                        .frame(width: 350, height: 50)
-                        .signInWithAppleButtonStyle(.white)
-                        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
-                        
-                        NavigationLink(destination: EmailSignUpView()) {
-                            HStack{
-                                Image(systemName: "envelope.fill")
-                                    .resizable()
-                                    .frame(width: 25,height: 20)
-                                    .foregroundStyle(Color.primaryColor)
-                                Text("Sign up with Email")
-                                    .bold()
-                                    .foregroundStyle(Color.blackColor)
-                                
-                            }
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 15)
-                            .background(Color.white)
-                            .cornerRadius(8)
-                            .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
-                        }
-                        .navigationTitle("")
-                        .navigationBarBackButtonHidden(true)
-                        
-                        HStack{
-                            Text("Already have an account?")
-                                .foregroundStyle(Color.gray)
-                            NavigationLink{
-                                EmailLoginView()
-                            } label: {
-                                Text("Log In")
-                                    .underline()
-                                    .foregroundStyle(Color.primaryColor)
-                            }
-                        }
-                        .padding(10)
                     }
-                    .padding(40)
+                    .padding(.vertical, 6)
+                    .background(Divider(), alignment: .bottom)
+                    .padding(.bottom, 4)
+                    
+                    HStack {
+                        Image(systemName: "lock")
+                        SecureField("Password", text: $viewModel.password)
+                            .submitLabel(.go)
+                    }
+                    .padding(.vertical, 6)
+                    .background(Divider(), alignment: .bottom)
+                    .padding(.bottom, 8)
+                    
+                    Button(action: signInWithEmailPassword){
+                        Text("Log in")
+                            .bold()
+                            .foregroundStyle(Color.blackColor)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 15)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                    }
+                    
+                    HStack {
+                        VStack { Divider() }
+                        Text("or")
+                        VStack { Divider() }
+                    }
+                    
+                    Button(action: signInWithGoogle){
+                        HStack{
+                            Image("google")
+                                .resizable()
+                                .frame(width: 20,height: 20)
+                            Text("Sign in with Google")
+                                .bold()
+                                .foregroundStyle(Color.blackColor)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 15)
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                    }
+                    
+                    SignInWithAppleButton(.signIn) { request in
+                        viewModel.handleSignInWithAppleRequest(request)
+                    } onCompletion: { result in
+                        viewModel.handleSignInWithAppleCompletion(result)
+                    }
+                    .frame(width: 360, height: 50)
+                    .signInWithAppleButtonStyle(.white)
+                    .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                    
+                    NavigationLink(destination: EmailSignUpView()) {
+                        HStack{
+                            Image(systemName: "envelope.fill")
+                                .resizable()
+                                .frame(width: 25,height: 20)
+                                .foregroundStyle(Color.primaryColor)
+                            Text("Sign up with Email")
+                                .bold()
+                                .foregroundStyle(Color.blackColor)
+                            
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 15)
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                    }
+                    .navigationTitle("")
+                    .navigationBarBackButtonHidden(true)
                 }
-                
+                .padding()
+                .padding(.top,250)
             }
         }
         .preferredColorScheme(.light)
@@ -124,7 +157,7 @@ struct Onboard3DView: View {
             RoundedRectangle(cornerRadius: 20)
                 .foregroundColor(.white)
                 .frame(width: 150, height: 60)
-                .offset(x: 120, y: 213)
+                .offset(x: 110, y: 210)
         }
     }
 }

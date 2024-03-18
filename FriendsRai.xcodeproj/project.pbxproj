@@ -21,16 +21,13 @@
 		CC89EA9A2B99852400AD83DF /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */; };
 		CC89EA9E2B99ABB300AD83DF /* HamburgerMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */; };
 		CC89EAA22B99B65E00AD83DF /* HamburgerMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */; };
-		CC89EAA62B99C50F00AD83DF /* HamburgerMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EAA52B99C50F00AD83DF /* HamburgerMenuViewModel.swift */; };
 		CCA5FBC62B95C00800D95A4A /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */; };
 		CCAF1FB32BA026B40094635A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF1FB22BA026B40094635A /* Location.swift */; };
 		CCAF1FB72BA05F590094635A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAF1FB62BA05F590094635A /* SplashScreenView.swift */; };
 		CCAFF7452B90747700C23FCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7442B90747700C23FCD /* FirebaseAuth */; };
 		CCAFF7472B90747700C23FCD /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7462B90747700C23FCD /* FirebaseAuthCombine-Community */; };
-		CCAFF7492B907A9A00C23FCD /* EmailLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */; };
 		CCAFF74B2B907AA900C23FCD /* EmailSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF74A2B907AA900C23FCD /* EmailSignUpView.swift */; };
 		CCAFF74D2B907D8300C23FCD /* EmailSignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF74C2B907D8300C23FCD /* EmailSignUpViewModel.swift */; };
-		CCAFF74F2B907D9400C23FCD /* EmailLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF74E2B907D9400C23FCD /* EmailLoginViewModel.swift */; };
 		CCAFF7512B907DB800C23FCD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7502B907DB800C23FCD /* AuthenticationViewModel.swift */; };
 		CCAFF7552B907EB500C23FCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7542B907EB500C23FCD /* FirebaseFirestore */; };
 		CCAFF7572B907EB500C23FCD /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7562B907EB500C23FCD /* FirebaseFirestoreCombine-Community */; };
@@ -70,14 +67,11 @@
 		CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuOption.swift; sourceTree = "<group>"; };
 		CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuRowView.swift; sourceTree = "<group>"; };
-		CC89EAA52B99C50F00AD83DF /* HamburgerMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuViewModel.swift; sourceTree = "<group>"; };
 		CCA5FBC52B95C00800D95A4A /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		CCAF1FB22BA026B40094635A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CCAF1FB62BA05F590094635A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginView.swift; sourceTree = "<group>"; };
 		CCAFF74A2B907AA900C23FCD /* EmailSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpView.swift; sourceTree = "<group>"; };
 		CCAFF74C2B907D8300C23FCD /* EmailSignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewModel.swift; sourceTree = "<group>"; };
-		CCAFF74E2B907D9400C23FCD /* EmailLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewModel.swift; sourceTree = "<group>"; };
 		CCAFF7502B907DB800C23FCD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		CCAFF75A2B907F6400C23FCD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CCAFF75C2B90817500C23FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -192,11 +186,9 @@
 			children = (
 				CCE3C7DB2B9073790089CF77 /* MainViewModel.swift */,
 				CCAFF74C2B907D8300C23FCD /* EmailSignUpViewModel.swift */,
-				CCAFF74E2B907D9400C23FCD /* EmailLoginViewModel.swift */,
 				CC6183DC2B98698600A424F2 /* AddFriendsViewModel.swift */,
 				CCAFF7502B907DB800C23FCD /* AuthenticationViewModel.swift */,
 				CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */,
-				CC89EAA52B99C50F00AD83DF /* HamburgerMenuViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -206,7 +198,6 @@
 			children = (
 				CCE3C7AF2B9037FA0089CF77 /* MainView.swift */,
 				CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */,
-				CCAFF7482B907A9A00C23FCD /* EmailLoginView.swift */,
 				CCAFF74A2B907AA900C23FCD /* EmailSignUpView.swift */,
 				CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */,
 				CC639C822B91A6E800FDFC3C /* MapView.swift */,
@@ -323,9 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE49E4D2B931BEE00963D2E /* EmergencyButtonViewModel.swift in Sources */,
-				CCAFF7492B907A9A00C23FCD /* EmailLoginView.swift in Sources */,
 				CCAF1FB72BA05F590094635A /* SplashScreenView.swift in Sources */,
-				CCAFF74F2B907D9400C23FCD /* EmailLoginViewModel.swift in Sources */,
 				CC163C332B9C181F00019059 /* HelplineRowView.swift in Sources */,
 				CCAFF74B2B907AA900C23FCD /* EmailSignUpView.swift in Sources */,
 				CC89EAA22B99B65E00AD83DF /* HamburgerMenuRowView.swift in Sources */,
@@ -345,7 +334,6 @@
 				CC639C812B91A6CA00FDFC3C /* EmergencyButtonView.swift in Sources */,
 				CCE3C7DA2B9073050089CF77 /* Users.swift in Sources */,
 				CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */,
-				CC89EAA62B99C50F00AD83DF /* HamburgerMenuViewModel.swift in Sources */,
 				CC6183DB2B98697800A424F2 /* AddFriendsView.swift in Sources */,
 				CCE3C7D62B90726B0089CF77 /* AuthenticationView.swift in Sources */,
 				CCE3C7DC2B9073790089CF77 /* MainViewModel.swift in Sources */,

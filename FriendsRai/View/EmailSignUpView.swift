@@ -115,19 +115,6 @@ struct EmailSignUpView: View {
                 .foregroundStyle(Color.primaryColor)
             FRButton(action: viewModel.register, backgroundColor: Color.blackColor, text: "Sign Up", textColor: .white)
             
-            HStack{
-                Text("Have an account?")
-                    .foregroundStyle(Color.gray)
-                NavigationLink{
-                    EmailLoginView()
-                } label: {
-                    Text("Log In")
-                        .underline()
-                        .foregroundStyle(Color.primaryColor)
-                }
-            }
-            .padding(10)
-            
             Spacer()
         }
     }
