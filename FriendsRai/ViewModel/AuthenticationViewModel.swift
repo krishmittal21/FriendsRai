@@ -29,7 +29,7 @@ class AuthenticationViewModel: ObservableObject {
     @Published var confirmPassword = ""
     @Published var isValid = false
     @Published var authenticationState: AuthenticationState = .unauthenticated
-    @Published var errorMessage: String?
+    @Published var errorMessage = ""
     @Published var currentUserId = ""
     @Published var displayName = ""
     @Published var user: FRUser? = nil
@@ -87,12 +87,8 @@ extension AuthenticationViewModel {
         }
         
         do  {
-            let result = try await Auth.auth().createUser(withEmail: email, password: password)
-            
-            name = result.user.displayName ?? ""
-            email = result.user.email ?? ""
+            try await Auth.auth().createUser(withEmail: email, password: password)
             insertUserRecord(id: currentUserId)
-            
             return true
         }
         catch {
