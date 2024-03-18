@@ -17,14 +17,13 @@ This Project was built in public, and you can follow the process on [Twitter](ht
 
 - [x]  Email/Password User Firebase Authentication
 - [x]  Google User Firebase Authentication
-- [ ]  Apple User Firebase Authentication
+- [x]  Apple User Firebase Authentication
 - [x]  Edit Friends Contact List
 - [x]  Countries Helpline Contact Lists
 - [x]  SOS Button
 - [x]  Map View
 - [x]  Verified Emergency Facilities on Map View
 - [x]  Intuitive User Interface
-- [ ]  Theme Switcher
 - [ ]  Widgets
 
 ## Contribute to the Project
@@ -38,17 +37,17 @@ To setup this Project Locally simply clone this repo and setup your own firebase
 |---|---|---|
 | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/splash.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/Auth.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/SignUp.png" width="200" height="400"> |
 
-| LogIn | Home | Select Message |
+| Home | Select Message | Send Message |
 |---|---|---|
-| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/LogIn.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/Home.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/SelectMessage.png" width="200" height="400"> |
+| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/Home.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/SelectMessage.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/SendMessage.png" width="200" height="400"> |
 
-| Send Message | Hamburger Menu | Helpline List |
+| Hamburger Menu | Helpline List | Helpline List Country Picker |
 |---|---|---|
-| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/SendMessage.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/Hamburger.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/HelplineList.png" width="200" height="400"> |
+| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/Hamburger.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/HelplineList.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/HelplineListCountryPicker.png" width="200" height="400"> |
 
-| Helpline List Country Picker | Friends Contact List | Map |
-|---|---|---|
-| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/HelplineListCountryPicker.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/FriendsContactList.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapView.png" width="200" height="400"> |
+| Friends Contact List | Map |
+|---|---|
+| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/FriendsContactList.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapView.png" width="200" height="400"> |
 
 | Map Verified Locations | Map Hospital Verified Locations | Map Police Stations Verified Locations |
 |---|---|---|
