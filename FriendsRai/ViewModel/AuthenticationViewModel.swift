@@ -91,8 +91,14 @@ extension AuthenticationViewModel {
         }
         
         do  {
-            try await Auth.auth().createUser(withEmail: email, password: password)
+            let result = try await Auth.auth().createUser(withEmail: email, password: password)
             insertUserRecord(id: currentUserId)
+            do {
+                try await result.user.sendEmailVerification()
+                print("Verification email sent successfully!")
+            } catch {
+                print("Error sending verification email: \(error.localizedDescription)")
+            }
             return true
         }
         catch {

@@ -34,11 +34,6 @@ struct EmailSignUpView: View {
                     .foregroundStyle(Color.gray)
             }
             
-            if  !viewModel.errorMessage.isEmpty{
-                Text(viewModel.errorMessage)
-                    .foregroundStyle(Color.red)
-            }
-            
             VStack {
                 if  !viewModel.errorMessage.isEmpty{
                     Text(viewModel.errorMessage)
@@ -72,7 +67,7 @@ struct EmailSignUpView: View {
                 HStack {
                     Image(systemName: "lock")
                     SecureField("Password", text: $viewModel.password)
-                        .submitLabel(.go)
+                        .submitLabel(.next)
                 }
                 .padding(.vertical, 6)
                 .background(Divider(), alignment: .bottom)
@@ -82,6 +77,9 @@ struct EmailSignUpView: View {
                     Image(systemName: "lock")
                     SecureField("Confirm Password", text: $viewModel.confirmPassword)
                         .submitLabel(.go)
+                        .onSubmit {
+                            signUpWithEmailPassword()
+                        }
                 }
                 .padding(.vertical, 6)
                 .background(Divider(), alignment: .bottom)

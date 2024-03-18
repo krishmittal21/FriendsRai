@@ -61,20 +61,30 @@ struct AuthenticationView: View {
                         Image(systemName: "lock")
                         SecureField("Password", text: $viewModel.password)
                             .submitLabel(.go)
+                            .onSubmit {
+                                signInWithEmailPassword()
+                            }
                     }
                     .padding(.vertical, 6)
                     .background(Divider(), alignment: .bottom)
                     .padding(.bottom, 8)
                     
-                    Button(action: signInWithEmailPassword){
-                        Text("Log in")
-                            .bold()
-                            .foregroundStyle(Color.blackColor)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 15)
-                            .background(Color.white)
-                            .cornerRadius(8)
-                            .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                    Button (action: signInWithEmailPassword) {
+                        if viewModel.authenticationState != .authenticating {
+                            Text("Login")
+                                .bold()
+                                .foregroundStyle(Color.black)
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 15)
+                                .background(Color.white)
+                                .cornerRadius(8)
+                                .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                        } else {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: .black))
+                                .padding(.vertical, 8)
+                                .frame(maxWidth: .infinity)
+                        }
                     }
                     
                     HStack {
@@ -127,8 +137,6 @@ struct AuthenticationView: View {
                         .cornerRadius(8)
                         .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                     }
-                    .navigationTitle("")
-                    .navigationBarBackButtonHidden(true)
                 }
                 .padding()
                 .padding(.top,250)
