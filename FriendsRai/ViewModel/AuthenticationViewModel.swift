@@ -33,6 +33,7 @@ class AuthenticationViewModel: ObservableObject {
     @Published var currentUserId = ""
     @Published var displayName = ""
     @Published var user: FRUser? = nil
+    
     private var currentNonce: String?
     private var handler: AuthStateDidChangeListenerHandle?
     
@@ -64,7 +65,6 @@ class AuthenticationViewModel: ObservableObject {
     }
     
 }
-
 
 extension AuthenticationViewModel {
     
