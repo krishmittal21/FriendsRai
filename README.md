@@ -47,8 +47,8 @@ To setup this Project Locally simply clone this repo and setup your own firebase
 
 | Friends Contact List | Widgets | Map |
 |---|---|---|
-| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/FriendsContactList.png" width="200" height="400"> | | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapView.png" width="200" height="400"> |
+| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/FriendsContactList.png" width="200" height="400"> | <img src="https://via.placeholder.com/200x400?text=Coming+Soon" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapView.png" width="200" height="400"> |
 
-| Map Verified Locations | Map Hospital Verified Locations | Map Police Stations Verified Locations |
+| Map Verified Locations | Map Hospital Verified Locations | Map Therapy Verified Locations |
 |---|---|---|
-| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapViewVerifiedLocations.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapViewLocationType.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapViewLocationType2.png" width="200" height="400"> |
+| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapViewVerifiedLocations.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapViewLocationType.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapViewLocationType3.png" width="200" height="400"> |
