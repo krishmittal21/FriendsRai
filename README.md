@@ -45,9 +45,9 @@ To setup this Project Locally simply clone this repo and setup your own firebase
 |---|---|---|
 | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/Hamburger.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/HelplineList.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/HelplineListCountryPicker.png" width="200" height="400"> |
 
-| Friends Contact List | Map |
-|---|---|
-| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/FriendsContactList.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapView.png" width="200" height="400"> |
+| Friends Contact List | Widgets | Map |
+|---|---|---|
+| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/FriendsContactList.png" width="200" height="400"> | | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapView.png" width="200" height="400"> |
 
 | Map Verified Locations | Map Hospital Verified Locations | Map Police Stations Verified Locations |
 |---|---|---|
