@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SplineRuntime
+import AuthenticationServices
 
 struct AuthenticationView: View {
     
@@ -19,16 +20,17 @@ struct AuthenticationView: View {
             ZStack{
                 Onboard3DView()
                     .frame(height: 500)
-                                
+                
                 VStack{
-    
+                    
                     Text("FriendsRai")
                         .font(.system(size: 30, weight: .bold))
                         .padding(.top, 40)
                     
                     Spacer()
-                
+                    
                     VStack{
+                        
                         Button{
                             Task {
                                 await viewModel.signInWithGoogle()
@@ -39,29 +41,24 @@ struct AuthenticationView: View {
                                     .resizable()
                                     .frame(width: 20,height: 20)
                                 Text("Sign in with Google")
+                                    .bold()
                                     .foregroundStyle(Color.blackColor)
                             }
                             .frame(maxWidth: .infinity)
-                            .padding(.vertical, 8)
+                            .padding(.vertical, 15)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         }
-                        .buttonStyle(.bordered)
                         
-                        Button{
-                            Task {
-                                
-                            }
-                        } label: {
-                            HStack{
-                                Image("apple")
-                                    .resizable()
-                                    .frame(width: 20,height: 20)
-                                Text("Sign in with Apple")
-                                    .foregroundStyle(Color.blackColor)
-                            }
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 8)
+                        SignInWithAppleButton(.signIn) { request in
+                            viewModel.handleSignInWithAppleRequest(request)
+                        } onCompletion: { result in
+                            viewModel.handleSignInWithAppleCompletion(result)
                         }
-                        .buttonStyle(.bordered)
+                        .frame(width: 350, height: 50)
+                        .signInWithAppleButtonStyle(.white)
+                        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         
                         NavigationLink(destination: EmailSignUpView()) {
                             HStack{
@@ -70,14 +67,16 @@ struct AuthenticationView: View {
                                     .frame(width: 25,height: 20)
                                     .foregroundStyle(Color.primaryColor)
                                 Text("Sign up with Email")
-                                
+                                    .bold()
                                     .foregroundStyle(Color.blackColor)
                                 
                             }
                             .frame(maxWidth: .infinity)
-                            .padding(.vertical, 8)
+                            .padding(.vertical, 15)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         }
-                        .buttonStyle(.bordered)
                         .navigationTitle("")
                         .navigationBarBackButtonHidden(true)
                         
@@ -116,16 +115,16 @@ struct Onboard3DView: View {
         //let url = URL(string: "https://build.spline.design/QGrYd1NbKDyAYxxrNAmM/scene.splineswift")!
         
         // // fetching from local
-         let url = Bundle.main.url(forResource: "ghosts", withExtension: "splineswift")!
+        let url = Bundle.main.url(forResource: "ghosts", withExtension: "splineswift")!
         
         return ZStack {
-                    try? SplineView(sceneFileURL: url)
-                        .edgesIgnoringSafeArea(.all)
-                    //Cover the Spline Logo
-                    RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(.white)
-                        .frame(width: 150, height: 60)
-                        .offset(x: 110, y: 213)
-                }
+            try? SplineView(sceneFileURL: url)
+                .edgesIgnoringSafeArea(.all)
+            //Cover the Spline Logo
+            RoundedRectangle(cornerRadius: 20)
+                .foregroundColor(.white)
+                .frame(width: 150, height: 60)
+                .offset(x: 120, y: 213)
+        }
     }
 }
