@@ -13,7 +13,7 @@ import Combine
 
 class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate {
     
-    @Published var user:User? = nil
+    @Published var user:FRUser? = nil
     @Published var contact:EmergencyContact? = nil
     @Published var contactName = ""
     @Published var contactNumber = ""

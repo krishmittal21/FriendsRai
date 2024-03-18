@@ -38,7 +38,7 @@ struct AuthenticationView: View {
                                 Image("google")
                                     .resizable()
                                     .frame(width: 20,height: 20)
-                                Text("SignIn with Google")
+                                Text("Sign in with Google")
                                     .foregroundStyle(Color.blackColor)
                             }
                             .frame(maxWidth: .infinity)
@@ -55,7 +55,7 @@ struct AuthenticationView: View {
                                 Image("apple")
                                     .resizable()
                                     .frame(width: 20,height: 20)
-                                Text("SignIn with Apple")
+                                Text("Sign in with Apple")
                                     .foregroundStyle(Color.blackColor)
                             }
                             .frame(maxWidth: .infinity)
@@ -69,7 +69,7 @@ struct AuthenticationView: View {
                                     .resizable()
                                     .frame(width: 25,height: 20)
                                     .foregroundStyle(Color.primaryColor)
-                                Text("SignUp with Email")
+                                Text("Sign up with Email")
                                 
                                     .foregroundStyle(Color.blackColor)
                                 

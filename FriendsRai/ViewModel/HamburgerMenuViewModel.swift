@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 class HamburgerMenuViewModel: ObservableObject {
     
-    @Published var user: User? = nil
+    @Published var user: FRUser? = nil
     init(){}
     
     func fetchUser(){
@@ -24,7 +24,7 @@ class HamburgerMenuViewModel: ObservableObject {
                 return
             }
             DispatchQueue.main.async {
-                self?.user = User(
+                self?.user = FRUser(
                     id: data["id"] as? String ?? "",
                     name: data["name"] as? String ?? "",
                     email: data["email"] as? String ?? "",

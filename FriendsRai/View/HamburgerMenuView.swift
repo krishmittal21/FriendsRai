@@ -67,7 +67,7 @@ struct HamburgerMenuView: View {
     }
     
     @ViewBuilder
-    func HamburgerMenuHeaderView (user: User) -> some View {
+    func HamburgerMenuHeaderView (user: FRUser) -> some View {
         HStack{
             Image(systemName: "person.circle.fill")
                 .imageScale(.large)
