@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var viewModel = MainViewModel()
+    @StateObject var viewModel = AuthenticationViewModel()
     @State private var showMenu: Bool = false
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {

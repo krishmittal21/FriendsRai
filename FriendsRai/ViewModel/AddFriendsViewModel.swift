@@ -13,12 +13,11 @@ import Combine
 
 class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate {
     
-    @Published var user:User? = nil
+    @Published var user:FRUser? = nil
     @Published var contact:EmergencyContact? = nil
     @Published var contactName = ""
     @Published var contactNumber = ""
     @Published var fetchedContacts: [EmergencyContact] = []
-    
     
     func deleteContact(_ contact: EmergencyContact) {
         guard let uId = Auth.auth().currentUser?.uid else {
@@ -44,8 +43,6 @@ class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate 
                 self.fetchedContacts.removeAll(where: { $0 == contact })
             }
     }
-    
-    
     
     func fetchContacts() {
         guard let uId = Auth.auth().currentUser?.uid else {
@@ -74,6 +71,23 @@ class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate 
             }
     }
     
+    func saveContact(){
+        
+        guard let uId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        let newId = UUID().uuidString
+        let newContact = EmergencyContact(name: contactName, phoneNumber: contactNumber)
+        
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(uId)
+            .collection("emergencycontacts")
+            .document(newId)
+            .setData(newContact.asDictionary())
+    fetchContacts()
+    }
     
     func openContactPicker() {
         let contactPicker = CNContactPickerViewController()
@@ -109,23 +123,5 @@ class AddFriendsViewModel:  NSObject, ObservableObject, CNContactPickerDelegate 
     func handlePhoneNumber(_ phoneNumber: String) {
         let phoneNumberWithoutSpace = phoneNumber.replacingOccurrences(of: " ", with: "")
         contactNumber = phoneNumberWithoutSpace
-    }
-    
-    func saveContact(){
-        
-        guard let uId = Auth.auth().currentUser?.uid else {
-            return
-        }
-        
-        let newId = UUID().uuidString
-        let newContact = EmergencyContact(name: contactName, phoneNumber: contactNumber)
-        
-        let db = Firestore.firestore()
-        db.collection("users")
-            .document(uId)
-            .collection("emergencycontacts")
-            .document(newId)
-            .setData(newContact.asDictionary())
-    fetchContacts()
     }
 }

@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct EmailSignUpView: View {
-    @StateObject var viewModel = EmailSignUpViewModel()
+    
+    @StateObject var viewModel = AuthenticationViewModel()
+    
+    private func signUpWithEmailPassword() {
+        Task {
+            await viewModel.signUpWithEmailPassword()
+        }
+    }
+    
     var body: some View {
+        
         VStack {
             
             Spacer()
@@ -113,20 +122,17 @@ struct EmailSignUpView: View {
             +
             Text("Privacy Policy.")
                 .foregroundStyle(Color.primaryColor)
-            FRButton(action: viewModel.register, backgroundColor: Color.blackColor, text: "Sign Up", textColor: .white)
             
-            HStack{
-                Text("Have an account?")
-                    .foregroundStyle(Color.gray)
-                NavigationLink{
-                    EmailLoginView()
-                } label: {
-                    Text("Log In")
-                        .underline()
-                        .foregroundStyle(Color.primaryColor)
-                }
+            Button(action: signUpWithEmailPassword){
+                Text("Sign up")
+                    .bold()
+                    .foregroundStyle(Color.blackColor)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 15)
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
             }
-            .padding(10)
             
             Spacer()
         }

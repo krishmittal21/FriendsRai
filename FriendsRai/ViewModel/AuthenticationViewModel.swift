@@ -11,6 +11,14 @@ import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
 import GoogleSignInSwift
+import AuthenticationServices
+import CryptoKit
+
+enum AuthenticationState {
+    case unauthenticated
+    case authenticating
+    case authenticated
+}
 
 @MainActor
 class AuthenticationViewModel: ObservableObject {
@@ -18,24 +26,147 @@ class AuthenticationViewModel: ObservableObject {
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
-    let currentDate = Date().timeIntervalSince1970
-    @Published var errorMessage: String?
+    @Published var confirmPassword = ""
+    @Published var isValid = false
+    @Published var authenticationState: AuthenticationState = .unauthenticated
+    @Published var errorMessage = ""
+    @Published var currentUserId = ""
+    @Published var displayName = ""
+    @Published var user: FRUser? = nil
+    
+    private var currentNonce: String?
+    private var handler: AuthStateDidChangeListenerHandle?
     
     enum AuthenticationError: Error {
         case tokenError(message: String)
+    }
+    
+    init(){
+        self.handler = Auth.auth().addStateDidChangeListener { [weak self] _, user in
+            DispatchQueue.main.async {
+                self?.currentUserId = user?.uid ?? ""
+            }
+        }
+    }
+    
+    public var isSignedIn: Bool{
+        return Auth.auth().currentUser != nil
+    }
+    
+    private func insertUserRecord(id: String) {
+        
+        let newUser = FRUser(id: id, name: name, email: email, joined: Date().timeIntervalSince1970)
+        
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(id)
+            .setData(newUser.asDictionary())
     }
     
 }
 
 extension AuthenticationViewModel {
     
-    func insertUserRecord(id: String, name: String, email: String, joined: TimeInterval) {
-        let newUser = User(id: id, name: name, email: email, joined: joined)
-        let db = Firestore.firestore()
-        db.collection("users")
-            .document(id)
-            .setData(newUser.asDictionary())
+    func signInWithEmailPassword() async -> Bool {
+        do {
+            let result = try await Auth.auth().signIn(withEmail: self.email, password: self.password)
+            name = result.user.displayName ?? ""
+            email = result.user.email ?? ""
+            return true
+        }
+        catch  {
+            print(error)
+            errorMessage = error.localizedDescription
+            return false
+        }
     }
+    
+    func signUpWithEmailPassword() async -> Bool {
+        
+        authenticationState = .authenticating
+        
+        guard validate() else {
+            return false
+        }
+        
+        do  {
+            try await Auth.auth().createUser(withEmail: email, password: password)
+            insertUserRecord(id: currentUserId)
+            return true
+        }
+        catch {
+            print(error)
+            errorMessage = error.localizedDescription
+            authenticationState = .unauthenticated
+            return false
+        }
+    }
+    
+    func fetchUser(){
+        guard let userId = Auth.auth().currentUser?.uid else{
+            return
+        }
+        let db = Firestore.firestore()
+        db.collection("users").document(userId).getDocument { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
+            DispatchQueue.main.async {
+                self?.user = FRUser(
+                    id: data["id"] as? String ?? "",
+                    name: data["name"] as? String ?? "",
+                    email: data["email"] as? String ?? "",
+                    joined: data["joined"] as? TimeInterval ?? 0
+                )
+            }
+        }
+    }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+        }
+        catch {
+            print(error)
+            errorMessage = error.localizedDescription
+        }
+    }
+    
+    func validate() -> Bool {
+        errorMessage = ""
+        
+        guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
+              !password.trimmingCharacters(in: .whitespaces).isEmpty,
+              !email.trimmingCharacters(in: .whitespaces).isEmpty else{
+            return false
+        }
+        
+        let emailRegex = #"^[a-zA-Z0-9._%+-]+@(gmail|yahoo|outlook|icloud)\.(com|net|org|edu)$"#
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        guard emailPredicate.evaluate(with: email) else {
+            errorMessage = "Please enter a valid email address from Google, Yahoo, Outlook, or iCloud."
+            return false
+        }
+        
+        let passwordRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*?[0-9])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}"
+        let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        guard passwordPredicate.evaluate(with: password) else {
+            errorMessage = "Password must be at least 8 characters long and contain at least one letter and one number."
+            return false
+        }
+        
+        guard password == confirmPassword else{
+            errorMessage = "Passwords Dont Match"
+            return false
+        }
+        
+        return true
+    }
+    
+}
+
+extension AuthenticationViewModel {
     
     func signInWithGoogle() async -> Bool {
         guard let clientID = FirebaseApp.app()?.options.clientID else {
@@ -61,10 +192,10 @@ extension AuthenticationViewModel {
             let accessToken = user.accessToken
             let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString, accessToken: accessToken.tokenString)
             let result = try await Auth.auth().signIn(with: credential)
-            let firebaseUser = result.user
             
-            insertUserRecord(id: firebaseUser.uid, name: firebaseUser.displayName ?? "", email: firebaseUser.email ?? "", joined: currentDate)
-            print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
+            name = result.user.displayName ?? ""
+            email = result.user.email ?? ""
+            insertUserRecord(id: currentUserId)
             
             return true
             
@@ -75,4 +206,146 @@ extension AuthenticationViewModel {
             return false
         }
     }
+}
+
+extension AuthenticationViewModel {
+    
+    func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
+        request.requestedScopes = [.fullName, .email]
+        let nonce = randomNonceString()
+        currentNonce = nonce
+        request.nonce = sha256(nonce)
+    }
+    
+    func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) {
+        if case .failure(let failure) = result {
+            errorMessage = failure.localizedDescription
+        }
+        else if case .success(let authorization) = result {
+            if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+                guard let nonce = currentNonce else {
+                    fatalError("Invalid state: a login callback was received, but no login request was sent.")
+                }
+                guard let appleIDToken = appleIDCredential.identityToken else {
+                    print("Unable to fetdch identify token.")
+                    return
+                }
+                guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+                    print("Unable to serialise token string from data: \(appleIDToken.debugDescription)")
+                    return
+                }
+                
+                let credential = OAuthProvider.credential(withProviderID: "apple.com",
+                                                          idToken: idTokenString,
+                                                          rawNonce: nonce)
+                Task {
+                    do {
+                        let result = try await Auth.auth().signIn(with: credential)
+                        await updateDisplayName(for: result.user, with: appleIDCredential)
+                        
+                        name = appleIDCredential.displayName()
+                        email = appleIDCredential.email ?? ""
+                        insertUserRecord(id: currentUserId)
+                    }
+                    catch {
+                        print("Error authenticating: \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
+    }
+    
+    func updateDisplayName(for user: User, with appleIDCredential: ASAuthorizationAppleIDCredential, force: Bool = false) async {
+        if let currentDisplayName = Auth.auth().currentUser?.displayName, !currentDisplayName.isEmpty {
+            // current user is non-empty, don't overwrite it
+        }
+        else {
+            let changeRequest = user.createProfileChangeRequest()
+            changeRequest.displayName = appleIDCredential.displayName()
+            do {
+                try await changeRequest.commitChanges()
+                self.displayName = Auth.auth().currentUser?.displayName ?? ""
+            }
+            catch {
+                print("Unable to update the user's displayname: \(error.localizedDescription)")
+                errorMessage = error.localizedDescription
+            }
+        }
+    }
+    
+    func verifySignInWithAppleAuthenticationState() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let providerData = Auth.auth().currentUser?.providerData
+        if let appleProviderData = providerData?.first(where: { $0.providerID == "apple.com" }) {
+            Task {
+                do {
+                    let credentialState = try await appleIDProvider.credentialState(forUserID: appleProviderData.uid)
+                    switch credentialState {
+                    case .authorized:
+                        break // The Apple ID credential is valid.
+                    case .revoked, .notFound:
+                        // The Apple ID credential is either revoked or was not found, so show the sign-in UI.
+                        self.signOut()
+                    default:
+                        break
+                    }
+                }
+                catch {
+                }
+            }
+        }
+    }
+    
+}
+
+extension ASAuthorizationAppleIDCredential {
+    func displayName() -> String {
+        return [self.fullName?.givenName, self.fullName?.familyName]
+            .compactMap( {$0})
+            .joined(separator: " ")
+    }
+}
+
+private func randomNonceString(length: Int = 32) -> String {
+    precondition(length > 0)
+    let charset: [Character] =
+    Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+    var result = ""
+    var remainingLength = length
+    
+    while remainingLength > 0 {
+        let randoms: [UInt8] = (0 ..< 16).map { _ in
+            var random: UInt8 = 0
+            let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
+            if errorCode != errSecSuccess {
+                fatalError(
+                    "Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)"
+                )
+            }
+            return random
+        }
+        
+        randoms.forEach { random in
+            if remainingLength == 0 {
+                return
+            }
+            
+            if random < charset.count {
+                result.append(charset[Int(random)])
+                remainingLength -= 1
+            }
+        }
+    }
+    
+    return result
+}
+
+private func sha256(_ input: String) -> String {
+    let inputData = Data(input.utf8)
+    let hashedData = SHA256.hash(data: inputData)
+    let hashString = hashedData.compactMap {
+        String(format: "%02x", $0)
+    }.joined()
+    
+    return hashString
 }
