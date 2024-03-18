@@ -47,7 +47,6 @@
 		CCE3C7D22B9070F80089CF77 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CCE3C7D12B9070F80089CF77 /* GoogleSignInSwift */; };
 		CCE3C7D62B90726B0089CF77 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */; };
 		CCE3C7DA2B9073050089CF77 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D92B9073050089CF77 /* Users.swift */; };
-		CCE3C7DC2B9073790089CF77 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7DB2B9073790089CF77 /* MainViewModel.swift */; };
 		CCE49E4D2B931BEE00963D2E /* EmergencyButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +80,6 @@
 		CCE3C7B42B9037FC0089CF77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		CCE3C7D92B9073050089CF77 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		CCE3C7DB2B9073790089CF77 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,7 +180,6 @@
 		CCE3C7C02B906E480089CF77 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CCE3C7DB2B9073790089CF77 /* MainViewModel.swift */,
 				CC6183DC2B98698600A424F2 /* AddFriendsViewModel.swift */,
 				CCAFF7502B907DB800C23FCD /* AuthenticationViewModel.swift */,
 				CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */,
@@ -332,7 +329,6 @@
 				CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */,
 				CC6183DB2B98697800A424F2 /* AddFriendsView.swift in Sources */,
 				CCE3C7D62B90726B0089CF77 /* AuthenticationView.swift in Sources */,
-				CCE3C7DC2B9073790089CF77 /* MainViewModel.swift in Sources */,
 				CC5C4FE52B92DD5E007CB12D /* EmergencyMessages.swift in Sources */,
 				CCA5FBC62B95C00800D95A4A /* EmergencyContact.swift in Sources */,
 			);

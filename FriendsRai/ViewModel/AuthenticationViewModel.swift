@@ -48,6 +48,10 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
     
+    public var isSignedIn: Bool{
+        return Auth.auth().currentUser != nil
+    }
+    
     private func insertUserRecord(id: String) {
         
         let newUser = FRUser(id: id, name: name, email: email, joined: Date().timeIntervalSince1970)
