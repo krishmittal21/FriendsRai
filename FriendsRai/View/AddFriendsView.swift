@@ -16,15 +16,15 @@ struct AddFriendsView: View {
             VStack {
                 HStack{
                     
-                    Text("My Friends")
-                        .font(.title)
-                        .bold()
+                    Text("Add Friends")
+                        .font(.title3)
                     
                     Spacer()
                     
                     Image(systemName:"person.crop.circle.fill.badge.plus")
                         .resizable()
-                        .frame(width: 50,height: 45)
+                        .frame(width: 30,height: 25)
+                        .foregroundStyle(Color.primaryColor)
                         .onTapGesture {
                             viewModel.openContactPicker()
                         }
@@ -51,6 +51,7 @@ struct AddFriendsView: View {
                 Spacer()
                 
             }
+            .navigationTitle("My Friends")
             .onAppear{
                 viewModel.fetchContacts()
             }

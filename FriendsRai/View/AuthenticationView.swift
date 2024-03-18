@@ -12,6 +12,7 @@ import AuthenticationServices
 struct AuthenticationView: View {
     
     @StateObject var viewModel = AuthenticationViewModel()
+    @State var isSignupView = false
     
     private func signInWithEmailPassword() {
         Task {
@@ -107,7 +108,9 @@ struct AuthenticationView: View {
                     .signInWithAppleButtonStyle(.white)
                     .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                     
-                    NavigationLink(destination: EmailSignUpView()) {
+                    Button{
+                        isSignupView.toggle()
+                    } label: {
                         HStack{
                             Image(systemName: "envelope.fill")
                                 .resizable()
@@ -129,6 +132,9 @@ struct AuthenticationView: View {
                 }
                 .padding()
                 .padding(.top,250)
+                .sheet(isPresented: $isSignupView) {
+                    EmailSignUpView()
+                }
             }
         }
         .preferredColorScheme(.light)

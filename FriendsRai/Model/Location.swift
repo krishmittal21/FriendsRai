@@ -19,6 +19,19 @@ enum LocationType:CaseIterable {
     case therapists
     case police
     
+    var name: String {
+        switch self {
+            
+        case .hospital:
+            "Hospital"
+        case .vets:
+            "Vets"
+        case .therapists:
+            "Therapy"
+        case .police:
+            "Police"
+        }
+    }
     var verifiedLocations: [Location] {
         switch self {
         case .hospital:

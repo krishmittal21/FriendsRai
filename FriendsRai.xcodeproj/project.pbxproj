@@ -17,7 +17,7 @@
 		CC639C812B91A6CA00FDFC3C /* EmergencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */; };
 		CC639C832B91A6E800FDFC3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C822B91A6E800FDFC3C /* MapView.swift */; };
 		CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */; };
-		CC7B82F82B962BAA00BAABEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC7B82F72B962BAA00BAABEE /* GoogleService-Info.plist */; };
+		CC7EB1BF2BA81CA0003B0712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC7EB1BE2BA81CA0003B0712 /* GoogleService-Info.plist */; };
 		CC89EA9A2B99852400AD83DF /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */; };
 		CC89EA9E2B99ABB300AD83DF /* HamburgerMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */; };
 		CC89EAA22B99B65E00AD83DF /* HamburgerMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */; };
@@ -61,7 +61,7 @@
 		CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonView.swift; sourceTree = "<group>"; };
 		CC639C822B91A6E800FDFC3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumberView.swift; sourceTree = "<group>"; };
-		CC7B82F72B962BAA00BAABEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC7EB1BE2BA81CA0003B0712 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuOption.swift; sourceTree = "<group>"; };
 		CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuRowView.swift; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				CC495A9B2B917DCA003A12FE /* ghosts.splineswift */,
+				CC7EB1BE2BA81CA0003B0712 /* GoogleService-Info.plist */,
 				CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */,
-				CC7B82F72B962BAA00BAABEE /* GoogleService-Info.plist */,
 				CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */,
 			);
 			path = Support;
@@ -294,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */,
-				CC7B82F82B962BAA00BAABEE /* GoogleService-Info.plist in Resources */,
+				CC7EB1BF2BA81CA0003B0712 /* GoogleService-Info.plist in Resources */,
 				CCE3C7B52B9037FC0089CF77 /* Preview Assets.xcassets in Resources */,
 				CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */,
 			);
