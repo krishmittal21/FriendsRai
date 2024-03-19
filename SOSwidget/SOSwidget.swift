@@ -31,7 +31,6 @@ struct SimpleEntry: TimelineEntry {
 
 struct SOSwidgetEntryView : View {
     var entry: Provider.Entry
-    @State private var isTapped: Bool = false
 
     var body: some View {
         ZStack{
@@ -39,13 +38,12 @@ struct SOSwidgetEntryView : View {
                 .frame(width: 300)
                 .foregroundStyle(LinearGradient(gradient: Gradient(colors: [.orange, .red]), startPoint: .top, endPoint: .bottom))
                 .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 5)
-                .scaleEffect(isTapped ? 1.2 : 1.0)
-                .animation(.bouncy)
             
             Text("SOS")
                 .font(.system(size: 40, weight: .bold))
                 .foregroundStyle(.white)
-        }    }
+        }
+    }
 }
 
 struct SOSwidget: Widget {
