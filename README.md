@@ -23,8 +23,8 @@ This Project was built in public, and you can follow the process on [Twitter](ht
 - [x]  SOS Button
 - [x]  Map View
 - [x]  Verified Emergency Facilities on Map View
+- [x]  Widgets
 - [x]  Intuitive User Interface
-- [ ]  Widgets
 
 ## Contribute to the Project
 
@@ -47,7 +47,7 @@ To setup this Project Locally simply clone this repo and setup your own firebase
 
 | Friends Contact List | Widgets | Map |
 |---|---|---|
-| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/FriendsContactList.png" width="200" height="400"> | <img src="https://via.placeholder.com/200x400?text=Coming+Soon" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapView.png" width="200" height="400"> |
+| <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/FriendsContactList.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/widget.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/FriendsRai/blob/main/FriendsRaiScreenshots/MapView.png" width="200" height="400"> |
 
 | Map Verified Locations | Map Hospital Verified Locations | Map Therapy Verified Locations |
 |---|---|---|
