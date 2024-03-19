@@ -48,6 +48,11 @@ class EmergencyButtonViewModel: NSObject, ObservableObject, MFMessageComposeView
         guard MFMessageComposeViewController.canSendText() else {
             return
         }
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = windowScene.windows.first,
+              let rootViewController = window.rootViewController else {
+            return
+        }
         
         fetchContacts { contacts in
             let phoneNumbers = contacts.map { $0.phoneNumber }
@@ -57,7 +62,7 @@ class EmergencyButtonViewModel: NSObject, ObservableObject, MFMessageComposeView
             composeVC.recipients = phoneNumbers
             composeVC.body = self.message
             
-            UIApplication.shared.windows.first?.rootViewController?.present(composeVC, animated: true, completion: nil)
+            rootViewController.present(composeVC,animated: true, completion: nil)
         }
     }
     
