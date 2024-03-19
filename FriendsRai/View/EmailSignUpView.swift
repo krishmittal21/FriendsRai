@@ -19,108 +19,112 @@ struct EmailSignUpView: View {
     
     var body: some View {
         
-        VStack {
-            
-            Spacer()
-            
-            VStack{
-                Text("Complete Your Profile")
-                    .font(.system(size: 25, weight: .medium, design: .rounded))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 27)
-                Text("Don't worry only you can see your personal info, no one else will be able to see it")
-                    .frame(width: 350)
-                    .font(.system(size: 15))
-                    .foregroundStyle(Color.gray)
-            }
+        NavigationView {
             
             VStack {
-                if  !viewModel.errorMessage.isEmpty{
-                    Text(viewModel.errorMessage)
-                        .foregroundStyle(Color.red)
+                
+                Spacer()
+                
+                VStack{
+                    Text("Complete Your Profile")
+                        .font(.system(size: 25, weight: .medium, design: .rounded))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 27)
+                    Text("Don't worry only you can see your personal info, no one else will be able to see it")
+                        .frame(width: 350)
+                        .font(.system(size: 15))
+                        .foregroundStyle(Color.gray)
                 }
                 
-                HStack {
-                    Image(systemName: "person")
-                    TextField("Name", text: $viewModel.name)
-                        .textInputAutocapitalization(.never)
-                        .disableAutocorrection(true)
-                        .submitLabel(.next)
+                VStack {
+                    if  !viewModel.errorMessage.isEmpty{
+                        Text(viewModel.errorMessage)
+                            .foregroundStyle(Color.red)
+                    }
                     
-                }
-                .padding(.vertical, 6)
-                .background(Divider(), alignment: .bottom)
-                .padding(.bottom, 4)
-                
-                HStack {
-                    Image(systemName: "at")
-                    TextField("Email", text: $viewModel.email)
-                        .textInputAutocapitalization(.never)
-                        .disableAutocorrection(true)
-                        .submitLabel(.next)
+                    HStack {
+                        Image(systemName: "person")
+                        TextField("Name", text: $viewModel.name)
+                            .textInputAutocapitalization(.never)
+                            .disableAutocorrection(true)
+                            .submitLabel(.next)
+                        
+                    }
+                    .padding(.vertical, 6)
+                    .background(Divider(), alignment: .bottom)
+                    .padding(.bottom, 4)
                     
+                    HStack {
+                        Image(systemName: "at")
+                        TextField("Email", text: $viewModel.email)
+                            .textInputAutocapitalization(.never)
+                            .disableAutocorrection(true)
+                            .submitLabel(.next)
+                        
+                    }
+                    .padding(.vertical, 6)
+                    .background(Divider(), alignment: .bottom)
+                    .padding(.bottom, 4)
+                    
+                    HStack {
+                        Image(systemName: "lock")
+                        SecureField("Password", text: $viewModel.password)
+                            .submitLabel(.next)
+                    }
+                    .padding(.vertical, 6)
+                    .background(Divider(), alignment: .bottom)
+                    .padding(.bottom, 8)
+                    
+                    HStack {
+                        Image(systemName: "lock")
+                        SecureField("Confirm Password", text: $viewModel.confirmPassword)
+                            .submitLabel(.go)
+                            .onSubmit {
+                                signUpWithEmailPassword()
+                            }
+                    }
+                    .padding(.vertical, 6)
+                    .background(Divider(), alignment: .bottom)
+                    .padding(.bottom, 8)
                 }
-                .padding(.vertical, 6)
-                .background(Divider(), alignment: .bottom)
-                .padding(.bottom, 4)
+                .padding()
                 
-                HStack {
-                    Image(systemName: "lock")
-                    SecureField("Password", text: $viewModel.password)
-                        .submitLabel(.next)
-                }
-                .padding(.vertical, 6)
-                .background(Divider(), alignment: .bottom)
-                .padding(.bottom, 8)
-                
-                HStack {
-                    Image(systemName: "lock")
-                    SecureField("Confirm Password", text: $viewModel.confirmPassword)
-                        .submitLabel(.go)
-                        .onSubmit {
-                            signUpWithEmailPassword()
+                VStack(alignment: .leading) {
+                    Button (action: signUpWithEmailPassword) {
+                        if viewModel.authenticationState != .authenticating || !viewModel.errorMessage.isEmpty {
+                            Text("Sign up")
+                                .bold()
+                                .foregroundStyle(Color.blackColor)
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 15)
+                                .background(Color.white)
+                                .cornerRadius(8)
+                                .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                        } else {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                .padding(.vertical, 8)
+                                .frame(maxWidth: .infinity)
                         }
+                        
+                    }
+                    .padding(.horizontal)
+                    
+                    HStack {
+                        Text("By Signing up, you agree to our")
+                        NavigationLink(destination: TermsView()) {
+                            Text("Terms & Conditions.")
+                                .foregroundColor(.gray)
+                                .underline()
+                        }
+                    }
+                    .padding(.horizontal, 25)
+                    .font(.caption)
+
                 }
-                .padding(.vertical, 6)
-                .background(Divider(), alignment: .bottom)
-                .padding(.bottom, 8)
+
+                Spacer()
             }
-            .padding()
-            
-            Button (action: signUpWithEmailPassword) {
-                if viewModel.authenticationState != .authenticating || !viewModel.errorMessage.isEmpty {
-                    Text("Sign up")
-                        .bold()
-                        .foregroundStyle(Color.blackColor)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 15)
-                        .background(Color.white)
-                        .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
-                } else {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                        .padding(.vertical, 8)
-                        .frame(maxWidth: .infinity)
-                }
-                
-            }
-            .padding(.horizontal)
-            
-            VStack(spacing: 4) {
-                Text("By Signing Up, you agree to our ")
-                +
-                Text("Terms & Conditions")
-                    .foregroundColor(.gray)
-                +
-                Text(" and ")
-                +
-                Text("Privacy Policy.")
-                    .foregroundColor(.gray)
-            }
-            .font(.caption)
-            
-            Spacer()
         }
     }
 }
