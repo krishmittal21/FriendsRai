@@ -65,7 +65,7 @@ struct MapView: View {
                                 Image(systemName: locationType.image)
                                 Text(locationType.name)
                             }
-                            .foregroundColor(locationType == selectedLocationType ? .white : Color.blackColor)
+                            .foregroundStyle(locationType == selectedLocationType ? .white : Color.neutralDarkColor)
                             .font(.subheadline)
                             .padding(10)
                             .background(locationType == selectedLocationType ? locationType.color.opacity(0.8) : .white)

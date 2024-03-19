@@ -17,7 +17,7 @@ struct HelplineNumberView: View {
                 Form{
                     Section{
                         Picker(selection: $countryIndex, label : Text("Country").bold()){
-                            ForEach(0 ..< Country.allCases.count){
+                            ForEach(0 ..< Country.allCases.count, id: \.self){
                                 Text(Country.allCases[$0].countryName).tag($0)
                             }
                         }

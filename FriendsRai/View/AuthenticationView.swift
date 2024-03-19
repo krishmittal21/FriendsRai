@@ -100,7 +100,7 @@ struct AuthenticationView: View {
                                 .frame(width: 20,height: 20)
                             Text("Sign in with Google")
                                 .bold()
-                                .foregroundStyle(Color.blackColor)
+                                .foregroundStyle(Color.neutralDarkColor)
                         }
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 15)
@@ -128,7 +128,7 @@ struct AuthenticationView: View {
                                 .foregroundStyle(Color.primaryColor)
                             Text("Sign up with Email")
                                 .bold()
-                                .foregroundStyle(Color.blackColor)
+                                .foregroundStyle(Color.neutralDarkColor)
                             
                         }
                         .frame(maxWidth: .infinity)
