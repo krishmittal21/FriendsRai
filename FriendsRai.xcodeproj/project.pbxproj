@@ -34,6 +34,12 @@
 		CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75A2B907F6400C23FCD /* Extensions.swift */; };
 		CCAFF7622B90931700C23FCD /* FRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7612B90931700C23FCD /* FRButton.swift */; };
 		CCAFF7652B90AA1500C23FCD /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7642B90AA1500C23FCD /* SplineRuntime */; };
+		CCC4E2182BA993A5004BFCCF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC4E2172BA993A4004BFCCF /* WidgetKit.framework */; };
+		CCC4E21A2BA993A5004BFCCF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC4E2192BA993A5004BFCCF /* SwiftUI.framework */; };
+		CCC4E21D2BA993A5004BFCCF /* SOSwidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4E21C2BA993A5004BFCCF /* SOSwidgetBundle.swift */; };
+		CCC4E21F2BA993A5004BFCCF /* SOSwidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4E21E2BA993A5004BFCCF /* SOSwidget.swift */; };
+		CCC4E2212BA993A7004BFCCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC4E2202BA993A7004BFCCF /* Assets.xcassets */; };
+		CCC4E2252BA993A7004BFCCF /* SOSwidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CCC4E2162BA993A4004BFCCF /* SOSwidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CCE3C7AE2B9037FA0089CF77 /* FriendsRaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */; };
 		CCE3C7B02B9037FA0089CF77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7AF2B9037FA0089CF77 /* MainView.swift */; };
 		CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */; };
@@ -49,6 +55,30 @@
 		CCE3C7DA2B9073050089CF77 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D92B9073050089CF77 /* Users.swift */; };
 		CCE49E4D2B931BEE00963D2E /* EmergencyButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCC4E2232BA993A7004BFCCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCE3C7A22B9037FA0089CF77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCC4E2152BA993A4004BFCCF;
+			remoteInfo = SOSwidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CCC4E2262BA993A7004BFCCF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CCC4E2252BA993A7004BFCCF /* SOSwidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CC163C302B9C121E00019059 /* HelplineNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumbers.swift; sourceTree = "<group>"; };
@@ -73,6 +103,13 @@
 		CCAFF75A2B907F6400C23FCD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CCAFF75C2B90817500C23FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CCAFF7612B90931700C23FCD /* FRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRButton.swift; sourceTree = "<group>"; };
+		CCC4E2162BA993A4004BFCCF /* SOSwidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SOSwidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC4E2172BA993A4004BFCCF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CCC4E2192BA993A5004BFCCF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CCC4E21C2BA993A5004BFCCF /* SOSwidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSwidgetBundle.swift; sourceTree = "<group>"; };
+		CCC4E21E2BA993A5004BFCCF /* SOSwidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSwidget.swift; sourceTree = "<group>"; };
+		CCC4E2202BA993A7004BFCCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCC4E2222BA993A7004BFCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCE3C7AA2B9037FA0089CF77 /* FriendsRai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsRai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRaiApp.swift; sourceTree = "<group>"; };
 		CCE3C7AF2B9037FA0089CF77 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -84,6 +121,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CCC4E2132BA993A4004BFCCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC4E21A2BA993A5004BFCCF /* SwiftUI.framework in Frameworks */,
+				CCC4E2182BA993A5004BFCCF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CCE3C7A72B9037FA0089CF77 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,14 +156,28 @@
 		CCAFF7432B90747700C23FCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCC4E2172BA993A4004BFCCF /* WidgetKit.framework */,
+				CCC4E2192BA993A5004BFCCF /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCC4E21B2BA993A5004BFCCF /* SOSwidget */ = {
+			isa = PBXGroup;
+			children = (
+				CCC4E21C2BA993A5004BFCCF /* SOSwidgetBundle.swift */,
+				CCC4E21E2BA993A5004BFCCF /* SOSwidget.swift */,
+				CCC4E2202BA993A7004BFCCF /* Assets.xcassets */,
+				CCC4E2222BA993A7004BFCCF /* Info.plist */,
+			);
+			path = SOSwidget;
 			sourceTree = "<group>";
 		};
 		CCE3C7A12B9037FA0089CF77 = {
 			isa = PBXGroup;
 			children = (
 				CCE3C7AC2B9037FA0089CF77 /* FriendsRai */,
+				CCC4E21B2BA993A5004BFCCF /* SOSwidget */,
 				CCE3C7AB2B9037FA0089CF77 /* Products */,
 				CCAFF7432B90747700C23FCD /* Frameworks */,
 			);
@@ -127,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CCE3C7AA2B9037FA0089CF77 /* FriendsRai.app */,
+				CCC4E2162BA993A4004BFCCF /* SOSwidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +279,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CCC4E2152BA993A4004BFCCF /* SOSwidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCC4E2292BA993A7004BFCCF /* Build configuration list for PBXNativeTarget "SOSwidgetExtension" */;
+			buildPhases = (
+				CCC4E2122BA993A4004BFCCF /* Sources */,
+				CCC4E2132BA993A4004BFCCF /* Frameworks */,
+				CCC4E2142BA993A4004BFCCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SOSwidgetExtension;
+			productName = SOSwidgetExtension;
+			productReference = CCC4E2162BA993A4004BFCCF /* SOSwidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CCE3C7A92B9037FA0089CF77 /* FriendsRai */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCE3C7B82B9037FC0089CF77 /* Build configuration list for PBXNativeTarget "FriendsRai" */;
@@ -225,10 +303,12 @@
 				CCE3C7A62B9037FA0089CF77 /* Sources */,
 				CCE3C7A72B9037FA0089CF77 /* Frameworks */,
 				CCE3C7A82B9037FA0089CF77 /* Resources */,
+				CCC4E2262BA993A7004BFCCF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CCC4E2242BA993A7004BFCCF /* PBXTargetDependency */,
 			);
 			name = FriendsRai;
 			packageProductDependencies = (
@@ -260,6 +340,9 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					CCC4E2152BA993A4004BFCCF = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					CCE3C7A92B9037FA0089CF77 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -284,11 +367,20 @@
 			projectRoot = "";
 			targets = (
 				CCE3C7A92B9037FA0089CF77 /* FriendsRai */,
+				CCC4E2152BA993A4004BFCCF /* SOSwidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CCC4E2142BA993A4004BFCCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC4E2212BA993A7004BFCCF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CCE3C7A82B9037FA0089CF77 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,6 +395,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CCC4E2122BA993A4004BFCCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC4E21D2BA993A5004BFCCF /* SOSwidgetBundle.swift in Sources */,
+				CCC4E21F2BA993A5004BFCCF /* SOSwidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CCE3C7A62B9037FA0089CF77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,7 +437,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CCC4E2242BA993A7004BFCCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCC4E2152BA993A4004BFCCF /* SOSwidgetExtension */;
+			targetProxy = CCC4E2232BA993A7004BFCCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		CCC4E2272BA993A7004BFCCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 792SAN8W5Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SOSwidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SOSwidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = krishmittal.FriendsRai.SOSwidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCC4E2282BA993A7004BFCCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 792SAN8W5Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SOSwidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SOSwidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = krishmittal.FriendsRai.SOSwidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CCE3C7B62B9037FC0089CF77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -459,6 +622,7 @@
 		CCE3C7B92B9037FC0089CF77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +653,7 @@
 		CCE3C7BA2B9037FC0089CF77 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -519,6 +684,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CCC4E2292BA993A7004BFCCF /* Build configuration list for PBXNativeTarget "SOSwidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCC4E2272BA993A7004BFCCF /* Debug */,
+				CCC4E2282BA993A7004BFCCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CCE3C7A52B9037FA0089CF77 /* Build configuration list for PBXProject "FriendsRai" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
