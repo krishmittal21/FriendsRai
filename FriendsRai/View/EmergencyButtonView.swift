@@ -44,19 +44,20 @@ struct EmergencyButtonView: View {
                 Circle()
                     .frame(width: 300)
                     .foregroundStyle(LinearGradient(gradient: Gradient(colors: [.orange, .red]), startPoint: .top, endPoint: .bottom))
-                    .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 5)
-                    .scaleEffect(isTapped ? 1.2 : 1.0)
-                    .animation(.bouncy)
-                
+
                 Text("SOS")
                     .font(.system(size: 40, weight: .bold))
                     .foregroundStyle(.white)
             }
+            .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 5)
+            .scaleEffect(isTapped ? 1.2 : 1.0)
             .onTapGesture {
-                viewModel.sendMessage()
-                isTapped.toggle()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                withAnimation(.bouncy) {
+                    viewModel.sendMessage()
                     isTapped.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        isTapped.toggle()
+                    }
                 }
             }
             
