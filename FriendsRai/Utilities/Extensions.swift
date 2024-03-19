@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Color {
     static let primaryColor = Color("AccentColor")
-    static let blackColor = Color("BlackColor")
+    static let neutralDarkColor = Color("NeutralDarkColor")
     static let backgroundColor = Color("BackgroundColor")
 }
 

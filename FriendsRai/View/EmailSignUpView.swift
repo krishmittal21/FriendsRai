@@ -94,7 +94,7 @@ struct EmailSignUpView: View {
                         if viewModel.authenticationState != .authenticating || !viewModel.errorMessage.isEmpty {
                             Text("Sign up")
                                 .bold()
-                                .foregroundStyle(Color.blackColor)
+                                .foregroundStyle(Color.neutralDarkColor)
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 15)
                                 .background(Color.white)

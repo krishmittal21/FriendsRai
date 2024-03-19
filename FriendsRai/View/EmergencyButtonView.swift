@@ -37,7 +37,7 @@ struct EmergencyButtonView: View {
                 Text("Message all your Friends at just one tap !")
                     .multilineTextAlignment(.center)
             }
-            .foregroundStyle(Color.blackColor)
+            .foregroundStyle(Color.neutralDarkColor)
             .padding(.bottom,40)
             
             ZStack{
@@ -76,7 +76,7 @@ struct EmergencyButtonView: View {
                         }
                     }
                 }
-                .foregroundStyle(Color.blackColor)
+                .foregroundStyle(Color.neutralDarkColor)
                 .padding(20)
             }
             
