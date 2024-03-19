@@ -18,6 +18,7 @@
 		CC639C832B91A6E800FDFC3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C822B91A6E800FDFC3C /* MapView.swift */; };
 		CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */; };
 		CC7EB1BF2BA81CA0003B0712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC7EB1BE2BA81CA0003B0712 /* GoogleService-Info.plist */; };
+		CC85B7592BA9A5DB00EA3E08 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85B7582BA9A5DB00EA3E08 /* TermsView.swift */; };
 		CC89EA9A2B99852400AD83DF /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */; };
 		CC89EA9E2B99ABB300AD83DF /* HamburgerMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */; };
 		CC89EAA22B99B65E00AD83DF /* HamburgerMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */; };
@@ -121,6 +122,7 @@
 		CC639C822B91A6E800FDFC3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumberView.swift; sourceTree = "<group>"; };
 		CC7EB1BE2BA81CA0003B0712 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC85B7582BA9A5DB00EA3E08 /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuOption.swift; sourceTree = "<group>"; };
 		CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuRowView.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				CC89EAA12B99B65E00AD83DF /* HamburgerMenuRowView.swift */,
 				CC163C322B9C181F00019059 /* HelplineRowView.swift */,
 				CCAF1FB62BA05F590094635A /* SplashScreenView.swift */,
+				CC85B7582BA9A5DB00EA3E08 /* TermsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				CCAF1FB32BA026B40094635A /* Location.swift in Sources */,
 				CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */,
 				CC89EA9E2B99ABB300AD83DF /* HamburgerMenuOption.swift in Sources */,
+				CC85B7592BA9A5DB00EA3E08 /* TermsView.swift in Sources */,
 				CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */,
 				CC163C312B9C121E00019059 /* HelplineNumbers.swift in Sources */,
 				CC6183DD2B98698600A424F2 /* AddFriendsViewModel.swift in Sources */,
