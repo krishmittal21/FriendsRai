@@ -24,6 +24,7 @@ This Project was built in public, and you can follow the process on [Twitter](ht
 - [x]  Map View
 - [x]  Verified Emergency Facilities on Map View
 - [x]  Widgets
+- [x]  Terms and Conditions Page
 - [x]  Intuitive User Interface
 
 ## Contribute to the Project
