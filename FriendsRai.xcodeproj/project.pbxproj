@@ -17,7 +17,6 @@
 		CC639C812B91A6CA00FDFC3C /* EmergencyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */; };
 		CC639C832B91A6E800FDFC3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C822B91A6E800FDFC3C /* MapView.swift */; };
 		CC639C852B91A6F900FDFC3C /* HelplineNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */; };
-		CC7EB1BF2BA81CA0003B0712 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC7EB1BE2BA81CA0003B0712 /* GoogleService-Info.plist */; };
 		CC85B7592BA9A5DB00EA3E08 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85B7582BA9A5DB00EA3E08 /* TermsView.swift */; };
 		CC89EA9A2B99852400AD83DF /* HamburgerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */; };
 		CC89EA9E2B99ABB300AD83DF /* HamburgerMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */; };
@@ -84,6 +83,7 @@
 		CCE3C7D62B90726B0089CF77 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */; };
 		CCE3C7DA2B9073050089CF77 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE3C7D92B9073050089CF77 /* Users.swift */; };
 		CCE49E4D2B931BEE00963D2E /* EmergencyButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */; };
+		CCFEB99E2BD147A7002673B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCFEB99D2BD147A7002673B7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +121,6 @@
 		CC639C802B91A6CA00FDFC3C /* EmergencyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonView.swift; sourceTree = "<group>"; };
 		CC639C822B91A6E800FDFC3C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CC639C842B91A6F900FDFC3C /* HelplineNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumberView.swift; sourceTree = "<group>"; };
-		CC7EB1BE2BA81CA0003B0712 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC85B7582BA9A5DB00EA3E08 /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		CC89EA992B99852400AD83DF /* HamburgerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuView.swift; sourceTree = "<group>"; };
 		CC89EA9D2B99ABB300AD83DF /* HamburgerMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuOption.swift; sourceTree = "<group>"; };
@@ -149,6 +148,8 @@
 		CCE3C7D52B90726B0089CF77 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		CCE3C7D92B9073050089CF77 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		CCE49E4C2B931BEE00963D2E /* EmergencyButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyButtonViewModel.swift; sourceTree = "<group>"; };
+		CCE4BD6E2BD4ACAB008176B1 /* FriendsRai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendsRai.entitlements; sourceTree = "<group>"; };
+		CCFEB99D2BD147A7002673B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +256,7 @@
 		CCE3C7AC2B9037FA0089CF77 /* FriendsRai */ = {
 			isa = PBXGroup;
 			children = (
+				CCE4BD6E2BD4ACAB008176B1 /* FriendsRai.entitlements */,
 				CCAFF75C2B90817500C23FCD /* Info.plist */,
 				CCE3C7BB2B906DC30089CF77 /* Support */,
 				CCE3C7C22B906E610089CF77 /* Utilities */,
@@ -278,7 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				CC495A9B2B917DCA003A12FE /* ghosts.splineswift */,
-				CC7EB1BE2BA81CA0003B0712 /* GoogleService-Info.plist */,
+				CCFEB99D2BD147A7002673B7 /* GoogleService-Info.plist */,
 				CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */,
 				CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */,
 			);
@@ -478,7 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */,
-				CC7EB1BF2BA81CA0003B0712 /* GoogleService-Info.plist in Resources */,
+				CCFEB99E2BD147A7002673B7 /* GoogleService-Info.plist in Resources */,
 				CCE3C7B52B9037FC0089CF77 /* Preview Assets.xcassets in Resources */,
 				CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */,
 			);
@@ -718,6 +720,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FriendsRai/FriendsRai.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FriendsRai/Preview Content\"";
@@ -750,6 +753,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FriendsRai/FriendsRai.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FriendsRai/Preview Content\"";
@@ -821,8 +825,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.21.0;
+				kind = exactVersion;
+				version = 10.19.0;
 			};
 		};
 		CCE3C7CE2B9070F80089CF77 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
