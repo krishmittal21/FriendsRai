@@ -12,7 +12,7 @@ struct HelplineNumberView: View {
     @State private var countryIndex = 0
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack{
                 Form{
                     Section{

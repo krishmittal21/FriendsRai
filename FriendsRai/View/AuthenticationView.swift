@@ -10,7 +10,8 @@ import SplineRuntime
 import AuthenticationServices
 
 struct AuthenticationView: View {
-    
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @StateObject var viewModel = AuthenticationViewModel()
     @State var isSignupView = false
     
@@ -29,7 +30,7 @@ struct AuthenticationView: View {
     
     var body: some View {
         
-        NavigationView{
+        VStack{
             
             ZStack{
                 
@@ -102,7 +103,7 @@ struct AuthenticationView: View {
                                 .bold()
                                 .foregroundStyle(Color.neutralDarkColor)
                         }
-                        .frame(maxWidth: .infinity)
+                        .frame(width: 360)
                         .padding(.vertical, 15)
                         .background(Color.white)
                         .cornerRadius(8)
@@ -131,7 +132,7 @@ struct AuthenticationView: View {
                                 .foregroundStyle(Color.neutralDarkColor)
                             
                         }
-                        .frame(maxWidth: .infinity)
+                        .frame(width: 360)
                         .padding(.vertical, 15)
                         .background(Color.white)
                         .cornerRadius(8)

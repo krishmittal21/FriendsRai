@@ -139,6 +139,10 @@ extension AuthenticationViewModel {
         }
     }
     
+    func delete() {
+        Auth.auth().currentUser?.delete()
+    }
+    
     func validate() -> Bool {
         errorMessage = ""
         
