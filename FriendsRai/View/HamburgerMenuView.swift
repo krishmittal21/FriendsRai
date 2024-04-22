@@ -50,6 +50,13 @@ struct HamburgerMenuView: View {
                                 .font(.system(size: 15))
                         }
                         .buttonStyle(.bordered)
+                        
+                        Button(role: .destructive) {
+                            viewModel.delete()
+                        } label: {
+                            Text("Delete Account")
+                                .padding(.horizontal,50)
+                        }
                     }
                     .padding()
                     .frame(width: 270, alignment: .leading)
