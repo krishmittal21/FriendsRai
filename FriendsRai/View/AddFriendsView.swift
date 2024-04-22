@@ -12,7 +12,7 @@ struct AddFriendsView: View {
     @StateObject var viewModel = AddFriendsViewModel()
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack {
                 HStack{
                     

@@ -16,7 +16,7 @@ struct EmergencyButtonView: View {
     let emergencyMessages = emergencyMessagesValues
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ZStack{
                 Color.backgroundColor.ignoresSafeArea()
                 buttonView

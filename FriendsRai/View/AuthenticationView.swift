@@ -29,7 +29,7 @@ struct AuthenticationView: View {
     
     var body: some View {
         
-        NavigationView{
+        VStack{
             
             ZStack{
                 
