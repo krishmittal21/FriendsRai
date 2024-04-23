@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CC163C312B9C121E00019059 /* HelplineNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC163C302B9C121E00019059 /* HelplineNumbers.swift */; };
 		CC163C332B9C181F00019059 /* HelplineRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC163C322B9C181F00019059 /* HelplineRowView.swift */; };
-		CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */ = {isa = PBXBuildFile; fileRef = CC495A9B2B917DCA003A12FE /* ghosts.splineswift */; };
 		CC5C4FE32B92D6F5007CB12D /* FRMessageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */; };
 		CC5C4FE52B92DD5E007CB12D /* EmergencyMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */; };
 		CC6183DB2B98697800A424F2 /* AddFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6183DA2B98697800A424F2 /* AddFriendsView.swift */; };
@@ -33,7 +32,6 @@
 		CCAFF7592B907EB500C23FCD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7582B907EB500C23FCD /* FirebaseFirestoreSwift */; };
 		CCAFF75B2B907F6400C23FCD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF75A2B907F6400C23FCD /* Extensions.swift */; };
 		CCAFF7622B90931700C23FCD /* FRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFF7612B90931700C23FCD /* FRButton.swift */; };
-		CCAFF7652B90AA1500C23FCD /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CCAFF7642B90AA1500C23FCD /* SplineRuntime */; };
 		CCC4E2182BA993A5004BFCCF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC4E2172BA993A4004BFCCF /* WidgetKit.framework */; };
 		CCC4E21A2BA993A5004BFCCF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC4E2192BA993A5004BFCCF /* SwiftUI.framework */; };
 		CCC4E21D2BA993A5004BFCCF /* SOSwidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC4E21C2BA993A5004BFCCF /* SOSwidgetBundle.swift */; };
@@ -113,7 +111,6 @@
 /* Begin PBXFileReference section */
 		CC163C302B9C121E00019059 /* HelplineNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineNumbers.swift; sourceTree = "<group>"; };
 		CC163C322B9C181F00019059 /* HelplineRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelplineRowView.swift; sourceTree = "<group>"; };
-		CC495A9B2B917DCA003A12FE /* ghosts.splineswift */ = {isa = PBXFileReference; lastKnownFileType = file; path = ghosts.splineswift; sourceTree = "<group>"; };
 		CC5C4FE22B92D6F5007CB12D /* FRMessageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRMessageCard.swift; sourceTree = "<group>"; };
 		CC5C4FE42B92DD5E007CB12D /* EmergencyMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMessages.swift; sourceTree = "<group>"; };
 		CC6183DA2B98697800A424F2 /* AddFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsView.swift; sourceTree = "<group>"; };
@@ -203,7 +200,6 @@
 				CCAFF7572B907EB500C23FCD /* FirebaseFirestoreCombine-Community in Frameworks */,
 				CCE3C7C72B9070E10089CF77 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				CCE3C7CD2B9070E10089CF77 /* FirebaseAppCheck in Frameworks */,
-				CCAFF7652B90AA1500C23FCD /* SplineRuntime in Frameworks */,
 				CCE3C7CB2B9070E10089CF77 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				CCE3C7D02B9070F80089CF77 /* GoogleSignIn in Frameworks */,
 				CCAFF7452B90747700C23FCD /* FirebaseAuth in Frameworks */,
@@ -279,7 +275,6 @@
 		CCE3C7BB2B906DC30089CF77 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				CC495A9B2B917DCA003A12FE /* ghosts.splineswift */,
 				CCFEB99D2BD147A7002673B7 /* GoogleService-Info.plist */,
 				CCE3C7B12B9037FC0089CF77 /* Assets.xcassets */,
 				CCE3C7AD2B9037FA0089CF77 /* FriendsRaiApp.swift */,
@@ -418,7 +413,6 @@
 				CCAFF7542B907EB500C23FCD /* FirebaseFirestore */,
 				CCAFF7562B907EB500C23FCD /* FirebaseFirestoreCombine-Community */,
 				CCAFF7582B907EB500C23FCD /* FirebaseFirestoreSwift */,
-				CCAFF7642B90AA1500C23FCD /* SplineRuntime */,
 			);
 			productName = FriendsRai;
 			productReference = CCE3C7AA2B9037FA0089CF77 /* FriendsRai.app */;
@@ -454,7 +448,6 @@
 			packageReferences = (
 				CCE3C7C32B9070E10089CF77 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CCE3C7CE2B9070F80089CF77 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				CCAFF7632B90AA1500C23FCD /* XCRemoteSwiftPackageReference "spline-ios" */,
 			);
 			productRefGroup = CCE3C7AB2B9037FA0089CF77 /* Products */;
 			projectDirPath = "";
@@ -479,7 +472,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC495A9C2B917DCA003A12FE /* ghosts.splineswift in Resources */,
 				CCFEB99E2BD147A7002673B7 /* GoogleService-Info.plist in Resources */,
 				CCE3C7B52B9037FC0089CF77 /* Preview Assets.xcassets in Resources */,
 				CCE3C7B22B9037FC0089CF77 /* Assets.xcassets in Resources */,
@@ -729,7 +721,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FriendsRai/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The App needs User's Current Location to display on the map with nearby verified locations.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The App needs access to your Current Location to display your position on the map and show nearby verified locations relevant to you. For example, if you're looking for a nearby vet, your location will be used to display vets in your vicinity on the map. Your location data is not stored or shared with third parties and is only used temporarily to provide this location-based service within the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -749,7 +741,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -768,7 +760,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FriendsRai/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The App needs User's Current Location to display on the map with nearby verified locations.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The App needs access to your Current Location to display your position on the map and show nearby verified locations relevant to you. For example, if you're looking for a nearby vet, your location will be used to display vets in your vicinity on the map. Your location data is not stored or shared with third parties and is only used temporarily to provide this location-based service within the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -788,7 +780,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -825,14 +817,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CCAFF7632B90AA1500C23FCD /* XCRemoteSwiftPackageReference "spline-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/splinetool/spline-ios";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		CCE3C7C32B9070E10089CF77 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -876,11 +860,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CCE3C7C32B9070E10089CF77 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
-		};
-		CCAFF7642B90AA1500C23FCD /* SplineRuntime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CCAFF7632B90AA1500C23FCD /* XCRemoteSwiftPackageReference "spline-ios" */;
-			productName = SplineRuntime;
 		};
 		CCD1C6692BA99E19002F3B7B /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

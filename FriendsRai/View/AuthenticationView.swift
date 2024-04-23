@@ -6,12 +6,9 @@
 //
 
 import SwiftUI
-import SplineRuntime
 import AuthenticationServices
 
 struct AuthenticationView: View {
-    @Environment(\.verticalSizeClass) var verticalSizeClass
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @StateObject var viewModel = AuthenticationViewModel()
     @State var isSignupView = false
     
@@ -32,18 +29,19 @@ struct AuthenticationView: View {
         
         VStack{
             
-            ZStack{
+            VStack{
                 
-                Onboard3DView()
-                    .frame(height: 500)
-                    .padding(.bottom,500)
+                Image("ghosts")
+                    .resizable()
+                    .frame(height: 200)
+                    .frame(maxWidth: .none)
                 
                 VStack{
                     
                     Text("FriendsRai")
                         .bold()
                         .font(.title)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(width: 360, alignment: .leading)
                         .padding(.bottom,20)
                     
                     HStack {
@@ -54,6 +52,7 @@ struct AuthenticationView: View {
                             .submitLabel(.next)
                         
                     }
+                    .frame(width: 360)
                     .padding(.vertical, 6)
                     .background(Divider(), alignment: .bottom)
                     .padding(.bottom, 4)
@@ -66,6 +65,7 @@ struct AuthenticationView: View {
                                 signInWithEmailPassword()
                             }
                     }
+                    .frame(width: 360)
                     .padding(.vertical, 6)
                     .background(Divider(), alignment: .bottom)
                     .padding(.bottom, 8)
@@ -75,7 +75,7 @@ struct AuthenticationView: View {
                             Text("Login")
                                 .bold()
                                 .foregroundStyle(Color.black)
-                                .frame(maxWidth: .infinity)
+                                .frame(width: 360)
                                 .padding(.vertical, 15)
                                 .background(Color.white)
                                 .cornerRadius(8)
@@ -84,7 +84,7 @@ struct AuthenticationView: View {
                             ProgressView()
                                 .progressViewStyle(CircularProgressViewStyle(tint: .black))
                                 .padding(.vertical, 8)
-                                .frame(maxWidth: .infinity)
+                                .frame(width: 360)
                         }
                     }
                     
@@ -93,6 +93,7 @@ struct AuthenticationView: View {
                         Text("or")
                         VStack { Divider() }
                     }
+                    .frame(width: 360)
                     
                     Button(action: signInWithGoogle){
                         HStack{
@@ -140,7 +141,6 @@ struct AuthenticationView: View {
                     }
                 }
                 .padding()
-                .padding(.top,250)
                 .sheet(isPresented: $isSignupView) {
                     EmailSignUpView()
                 }
@@ -153,26 +153,4 @@ struct AuthenticationView: View {
 
 #Preview {
     AuthenticationView()
-}
-
-
-struct Onboard3DView: View {
-    var body: some View {
-        
-        // fetching from cloud
-        //let url = URL(string: "https://build.spline.design/QGrYd1NbKDyAYxxrNAmM/scene.splineswift")!
-        
-        // // fetching from local
-        let url = Bundle.main.url(forResource: "ghosts", withExtension: "splineswift")!
-        
-        return ZStack {
-            try? SplineView(sceneFileURL: url)
-                .edgesIgnoringSafeArea(.all)
-            //Cover the Spline Logo
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(.white)
-                .frame(width: 150, height: 60)
-                .offset(x: 110, y: 210)
-        }
-    }
 }
