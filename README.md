@@ -1,5 +1,9 @@
 # FriendsRai
 
+<p align="center">
+    <a href="https://apps.apple.com/in/app/friendsrai/id6499087549"><img src="https://texttofloss.com/wp-content/uploads/2021/01/App-Store-Button-transparent.png" alt="Download on the App Store" width="200"></a>
+</p>
+
 Welcome to FriendsRai, your ultimate companion for seeking trusted advice and assistance in times of need. With FriendsRai, you have a reliable platform where you can effortlessly connect with all of your friends and friendly with the click of a button, access emergency hotline numbers across different countries, and locate verified emergency facilities including hospitals, veterinary clinics, therapists, and police stations.
 
 This Project was built in public, and you can follow the process on [Twitter](https://twitter.com/hashtag/FriendsRai?src=hashtag_click) using #FriendsRai.
